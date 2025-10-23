@@ -469,29 +469,6 @@
             z-index: 99;
         }
         
-        .glossary-term {
-            color: var(--primary-dark);
-            font-weight: bold;
-            cursor: help;
-            border-bottom: 1px dotted var(--primary-dark);
-        }
-        
-        .glossary-popup {
-            display: none;
-            position: absolute;
-            background-color: var(--white);
-            border: 1px solid #ddd;
-            border-radius: var(--border-radius);
-            padding: 1rem;
-            box-shadow: var(--shadow);
-            z-index: 1000;
-            max-width: 300px;
-        }
-        
-        .glossary-term:hover + .glossary-popup {
-            display: block;
-        }
-        
         .key-point {
             background-color: #e1f5fe;
             border-left: 4px solid var(--accent-color);
@@ -504,34 +481,6 @@
             font-weight: bold;
             color: var(--accent-color);
             margin-bottom: 0.5rem;
-        }
-        
-        .section-nav {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #ddd;
-        }
-        
-        .section-nav a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-        }
-        
-        .section-nav a:hover {
-            text-decoration: underline;
-        }
-        
-        .section-nav a.prev i {
-            margin-right: 5px;
-        }
-        
-        .section-nav a.next i {
-            margin-left: 5px;
         }
         
         @media (max-width: 768px) {
@@ -653,8 +602,10 @@
                     
                     <div class="flashcard-set">
                         <div class="flashcard-set-title">Tasmanian Ecosystems Flashcards</div>
-                        <div class="flashcard-container">
-                            <div class="flashcard" id="flashcard1">
+                        
+                        <!-- Flashcard 1 -->
+                        <div class="flashcard-container" id="welcome-card-1">
+                            <div class="flashcard" onclick="flipCard('welcome-card-1')">
                                 <div class="flashcard-front">
                                     <h3>What is the most significant threat to Tasmanian ecosystems?</h3>
                                 </div>
@@ -663,13 +614,14 @@
                                 </div>
                             </div>
                             <div class="flashcard-nav">
-                                <button class="nav-button" onclick="flipCard('flashcard1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
-                                <button class="nav-button" onclick="nextCard('welcome')"><i class="fas fa-arrow-right"></i> Next</button>
+                                <button class="nav-button" onclick="flipCard('welcome-card-1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="showNextCard('welcome', 1)"><i class="fas fa-arrow-right"></i> Next</button>
                             </div>
                         </div>
                         
-                        <div class="flashcard-container" style="display:none;" id="flashcard2">
-                            <div class="flashcard">
+                        <!-- Flashcard 2 -->
+                        <div class="flashcard-container" id="welcome-card-2" style="display:none;">
+                            <div class="flashcard" onclick="flipCard('welcome-card-2')">
                                 <div class="flashcard-front">
                                     <h3>What percentage of Tasmania is protected in reserves?</h3>
                                 </div>
@@ -678,14 +630,15 @@
                                 </div>
                             </div>
                             <div class="flashcard-nav">
-                                <button class="nav-button" onclick="prevCard('welcome')"><i class="fas fa-arrow-left"></i> Previous</button>
-                                <button class="nav-button" onclick="flipCard('flashcard2')"><i class="fas fa-sync-alt"></i> Flip Card</button>
-                                <button class="nav-button" onclick="nextCard('welcome')"><i class="fas fa-arrow-right"></i> Next</button>
+                                <button class="nav-button" onclick="showPrevCard('welcome', 2)"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('welcome-card-2')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="showNextCard('welcome', 2)"><i class="fas fa-arrow-right"></i> Next</button>
                             </div>
                         </div>
                         
-                        <div class="flashcard-container" style="display:none;" id="flashcard3">
-                            <div class="flashcard">
+                        <!-- Flashcard 3 -->
+                        <div class="flashcard-container" id="welcome-card-3" style="display:none;">
+                            <div class="flashcard" onclick="flipCard('welcome-card-3')">
                                 <div class="flashcard-front">
                                     <h3>What is the significance of Tasmania's Gondwanan heritage?</h3>
                                 </div>
@@ -694,8 +647,8 @@
                                 </div>
                             </div>
                             <div class="flashcard-nav">
-                                <button class="nav-button" onclick="prevCard('welcome')"><i class="fas fa-arrow-left"></i> Previous</button>
-                                <button class="nav-button" onclick="flipCard('flashcard3')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="showPrevCard('welcome', 3)"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('welcome-card-3')"><i class="fas fa-sync-alt"></i> Flip Card</button>
                             </div>
                         </div>
                     </div>
@@ -762,8 +715,10 @@
                     
                     <div class="flashcard-set">
                         <div class="flashcard-set-title">Legislation Flashcards</div>
-                        <div class="flashcard-container">
-                            <div class="flashcard" id="flashcard1-1">
+                        
+                        <!-- Flashcard 1 -->
+                        <div class="flashcard-container" id="section1-card-1">
+                            <div class="flashcard" onclick="flipCard('section1-card-1')">
                                 <div class="flashcard-front">
                                     <h3>Which Tasmanian Act establishes the reserve system?</h3>
                                 </div>
@@ -772,13 +727,14 @@
                                 </div>
                             </div>
                             <div class="flashcard-nav">
-                                <button class="nav-button" onclick="flipCard('flashcard1-1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
-                                <button class="nav-button" onclick="nextCard('section1')"><i class="fas fa-arrow-right"></i> Next</button>
+                                <button class="nav-button" onclick="flipCard('section1-card-1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="showNextCard('section1', 1)"><i class="fas fa-arrow-right"></i> Next</button>
                             </div>
                         </div>
                         
-                        <div class="flashcard-container" style="display:none;" id="flashcard1-2">
-                            <div class="flashcard">
+                        <!-- Flashcard 2 -->
+                        <div class="flashcard-container" id="section1-card-2" style="display:none;">
+                            <div class="flashcard" onclick="flipCard('section1-card-2')">
                                 <div class="flashcard-front">
                                     <h3>What is the purpose of the Threatened Species Protection Act 1995?</h3>
                                 </div>
@@ -787,14 +743,15 @@
                                 </div>
                             </div>
                             <div class="flashcard-nav">
-                                <button class="nav-button" onclick="prevCard('section1')"><i class="fas fa-arrow-left"></i> Previous</button>
-                                <button class="nav-button" onclick="flipCard('flashcard1-2')"><i class="fas fa-sync-alt"></i> Flip Card</button>
-                                <button class="nav-button" onclick="nextCard('section1')"><i class="fas fa-arrow-right"></i> Next</button>
+                                <button class="nav-button" onclick="showPrevCard('section1', 2)"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('section1-card-2')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="showNextCard('section1', 2)"><i class="fas fa-arrow-right"></i> Next</button>
                             </div>
                         </div>
                         
-                        <div class="flashcard-container" style="display:none;" id="flashcard1-3">
-                            <div class="flashcard">
+                        <!-- Flashcard 3 -->
+                        <div class="flashcard-container" id="section1-card-3" style="display:none;">
+                            <div class="flashcard" onclick="flipCard('section1-card-3')">
                                 <div class="flashcard-front">
                                     <h3>What does the Weed Management Act 1999 do?</h3>
                                 </div>
@@ -803,8 +760,8 @@
                                 </div>
                             </div>
                             <div class="flashcard-nav">
-                                <button class="nav-button" onclick="prevCard('section1')"><i class="fas fa-arrow-left"></i> Previous</button>
-                                <button class="nav-button" onclick="flipCard('flashcard1-3')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="showPrevCard('section1', 3)"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('section1-card-3')"><i class="fas fa-sync-alt"></i> Flip Card</button>
                             </div>
                         </div>
                     </div>
@@ -820,6 +777,7 @@
                         </ol>
                     </div>
                     
+                    <!-- Rest of Section 1 content remains the same -->
                     <h3>1.2 Identify and Report Native Fauna and Flora and Significant Features</h3>
                     <p>A core principle of ecological work is to "first, do no harm." This means being able to recognise and protect the valuable assets within your work site.</p>
                     
@@ -951,8 +909,10 @@
                     
                     <div class="flashcard-set">
                         <div class="flashcard-set-title">Weed Control Methods Flashcards</div>
-                        <div class="flashcard-container">
-                            <div class="flashcard" id="flashcard2-1">
+                        
+                        <!-- Flashcard 1 -->
+                        <div class="flashcard-container" id="section2-card-1">
+                            <div class="flashcard" onclick="flipCard('section2-card-1')">
                                 <div class="flashcard-front">
                                     <h3>What is the "cut and paint" method?</h3>
                                 </div>
@@ -961,13 +921,14 @@
                                 </div>
                             </div>
                             <div class="flashcard-nav">
-                                <button class="nav-button" onclick="flipCard('flashcard2-1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
-                                <button class="nav-button" onclick="nextCard('section2')"><i class="fas fa-arrow-right"></i> Next</button>
+                                <button class="nav-button" onclick="flipCard('section2-card-1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="showNextCard('section2', 1)"><i class="fas fa-arrow-right"></i> Next</button>
                             </div>
                         </div>
                         
-                        <div class="flashcard-container" style="display:none;" id="flashcard2-2">
-                            <div class="flashcard">
+                        <!-- Flashcard 2 -->
+                        <div class="flashcard-container" id="section2-card-2" style="display:none;">
+                            <div class="flashcard" onclick="flipCard('section2-card-2')">
                                 <div class="flashcard-front">
                                     <h3>What is the "drill and fill" method?</h3>
                                 </div>
@@ -976,14 +937,15 @@
                                 </div>
                             </div>
                             <div class="flashcard-nav">
-                                <button class="nav-button" onclick="prevCard('section2')"><i class="fas fa-arrow-left"></i> Previous</button>
-                                <button class="nav-button" onclick="flipCard('flashcard2-2')"><i class="fas fa-sync-alt"></i> Flip Card</button>
-                                <button class="nav-button" onclick="nextCard('section2')"><i class="fas fa-arrow-right"></i> Next</button>
+                                <button class="nav-button" onclick="showPrevCard('section2', 2)"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('section2-card-2')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="showNextCard('section2', 2)"><i class="fas fa-arrow-right"></i> Next</button>
                             </div>
                         </div>
                         
-                        <div class="flashcard-container" style="display:none;" id="flashcard2-3">
-                            <div class="flashcard">
+                        <!-- Flashcard 3 -->
+                        <div class="flashcard-container" id="section2-card-3" style="display:none;">
+                            <div class="flashcard" onclick="flipCard('section2-card-3')">
                                 <div class="flashcard-front">
                                     <h3>When is foliar spraying appropriate?</h3>
                                 </div>
@@ -992,12 +954,13 @@
                                 </div>
                             </div>
                             <div class="flashcard-nav">
-                                <button class="nav-button" onclick="prevCard('section2')"><i class="fas fa-arrow-left"></i> Previous</button>
-                                <button class="nav-button" onclick="flipCard('flashcard2-3')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="showPrevCard('section2', 3)"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('section2-card-3')"><i class="fas fa-sync-alt"></i> Flip Card</button>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Rest of Section 2 content remains the same -->
                     <div class="activity-box">
                         <div class="activity-title"><i class="fas fa-file-alt"></i> Self-Directed Activity: Weed Control Strategy Report</div>
                         <p>Choose a specific Tasmanian environmental weed (e.g., Spanish Heath, English Broom, Willow). Research and write a 500-word report that outlines:</p>
@@ -1088,8 +1051,10 @@
                     
                     <div class="flashcard-set">
                         <div class="flashcard-set-title">Site Reinstatement Flashcards</div>
-                        <div class="flashcard-container">
-                            <div class="flashcard" id="flashcard3-1">
+                        
+                        <!-- Flashcard 1 -->
+                        <div class="flashcard-container" id="section3-card-1">
+                            <div class="flashcard" onclick="flipCard('section3-card-1')">
                                 <div class="flashcard-front">
                                     <h3>What is the purpose of site reinstatement?</h3>
                                 </div>
@@ -1098,13 +1063,14 @@
                                 </div>
                             </div>
                             <div class="flashcard-nav">
-                                <button class="nav-button" onclick="flipCard('flashcard3-1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
-                                <button class="nav-button" onclick="nextCard('section3')"><i class="fas fa-arrow-right"></i> Next</button>
+                                <button class="nav-button" onclick="flipCard('section3-card-1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="showNextCard('section3', 1)"><i class="fas fa-arrow-right"></i> Next</button>
                             </div>
                         </div>
                         
-                        <div class="flashcard-container" style="display:none;" id="flashcard3-2">
-                            <div class="flashcard">
+                        <!-- Flashcard 2 -->
+                        <div class="flashcard-container" id="section3-card-2" style="display:none;">
+                            <div class="flashcard" onclick="flipCard('section3-card-2')">
                                 <div class="flashcard-front">
                                     <h3>What are three methods for erosion control on disturbed sites?</h3>
                                 </div>
@@ -1113,14 +1079,15 @@
                                 </div>
                             </div>
                             <div class="flashcard-nav">
-                                <button class="nav-button" onclick="prevCard('section3')"><i class="fas fa-arrow-left"></i> Previous</button>
-                                <button class="nav-button" onclick="flipCard('flashcard3-2')"><i class="fas fa-sync-alt"></i> Flip Card</button>
-                                <button class="nav-button" onclick="nextCard('section3')"><i class="fas fa-arrow-right"></i> Next</button>
+                                <button class="nav-button" onclick="showPrevCard('section3', 2)"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('section3-card-2')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="showNextCard('section3', 2)"><i class="fas fa-arrow-right"></i> Next</button>
                             </div>
                         </div>
                         
-                        <div class="flashcard-container" style="display:none;" id="flashcard3-3">
-                            <div class="flashcard">
+                        <!-- Flashcard 3 -->
+                        <div class="flashcard-container" id="section3-card-3" style="display:none;">
+                            <div class="flashcard" onclick="flipCard('section3-card-3')">
                                 <div class="flashcard-front">
                                     <h3>Why is monitoring important after maintenance work?</h3>
                                 </div>
@@ -1129,12 +1096,13 @@
                                 </div>
                             </div>
                             <div class="flashcard-nav">
-                                <button class="nav-button" onclick="prevCard('section3')"><i class="fas fa-arrow-left"></i> Previous</button>
-                                <button class="nav-button" onclick="flipCard('flashcard3-3')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="showPrevCard('section3', 3)"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('section3-card-3')"><i class="fas fa-sync-alt"></i> Flip Card</button>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Rest of Section 3 content remains the same -->
                     <div class="activity-box">
                         <div class="activity-title"><i class="fas fa-redo"></i> Self-Directed Activity: Site Reinstatement Plan</div>
                         <p>Using the same scenario from the previous activity (gorse control in a heathland with orchids and Phytophthora risk), now develop a reinstatement plan. Detail:</p>
@@ -1316,14 +1284,6 @@
         const tabs = ['welcome', 'section1', 'section2', 'section3', 'appendices'];
         let currentTab = 'welcome';
         
-        // Track current flashcard for each section
-        const currentFlashcards = {
-            'welcome': 1,
-            'section1': 1,
-            'section2': 1,
-            'section3': 1
-        };
-        
         function switchTab(tabId) {
             // Hide current tab
             document.getElementById(currentTab).classList.remove('active');
@@ -1339,13 +1299,8 @@
             document.getElementById('sidebar').classList.remove('active');
             document.getElementById('mobileOverlay').classList.remove('active');
             
-            // Scroll to top of content
-            document.querySelector('.main-content').scrollTop = 0;
-            
-            // Reset flashcards for the new section
-            if (currentFlashcards.hasOwnProperty(tabId)) {
-                showFlashcard(tabId, 1);
-            }
+            // Scroll to top of page
+            window.scrollTo(0, 0);
         }
         
         // Progress tracking
@@ -1366,44 +1321,36 @@
         
         // Flashcard functionality
         function flipCard(cardId) {
-            const card = document.getElementById(cardId);
+            const card = document.getElementById(cardId).querySelector('.flashcard');
             card.classList.toggle('flipped');
         }
         
-        function showFlashcard(section, cardNumber) {
-            // Hide all flashcards in this section
-            const flashcards = document.querySelectorAll(`#${section} .flashcard-container`);
-            flashcards.forEach(card => {
-                card.style.display = 'none';
-            });
+        function showNextCard(section, currentCardNumber) {
+            // Hide current card
+            document.getElementById(`${section}-card-${currentCardNumber}`).style.display = 'none';
             
-            // Show the selected flashcard
-            const currentCard = document.querySelector(`#${section} #flashcard${section === 'welcome' ? cardNumber : `-${cardNumber}`}`);
-            if (currentCard) {
-                currentCard.style.display = 'block';
-            }
-            
-            // Update current flashcard tracking
-            currentFlashcards[section] = cardNumber;
-        }
-        
-        function nextCard(section) {
-            const maxCards = section === 'welcome' ? 3 : 3; // Adjust based on actual number of cards
-            if (currentFlashcards[section] < maxCards) {
-                showFlashcard(section, currentFlashcards[section] + 1);
+            // Show next card
+            const nextCard = document.getElementById(`${section}-card-${currentCardNumber + 1}`);
+            if (nextCard) {
+                nextCard.style.display = 'block';
             }
         }
         
-        function prevCard(section) {
-            if (currentFlashcards[section] > 1) {
-                showFlashcard(section, currentFlashcards[section] - 1);
+        function showPrevCard(section, currentCardNumber) {
+            // Hide current card
+            document.getElementById(`${section}-card-${currentCardNumber}`).style.display = 'none';
+            
+            // Show previous card
+            const prevCard = document.getElementById(`${section}-card-${currentCardNumber - 1}`);
+            if (prevCard) {
+                prevCard.style.display = 'block';
             }
         }
         
         // Quiz submission
         function submitQuiz(quizId) {
-            const quiz = document.querySelector(`#${quizId}`);
-            const questions = quiz.querySelectorAll('.question');
+            const quizContainer = document.querySelector(`#${currentTab} .quiz-container`);
+            const questions = quizContainer.querySelectorAll('.question');
             let allAnswered = true;
             
             questions.forEach(question => {
@@ -1418,7 +1365,7 @@
             
             if (allAnswered) {
                 alert('Quiz submitted successfully!');
-                markSectionComplete(quizId);
+                markSectionComplete(currentTab);
             } else {
                 alert('Please answer all questions before submitting.');
             }
@@ -1471,11 +1418,6 @@
             
             // Mark welcome section as complete by default
             markSectionComplete('welcome');
-            
-            // Initialize flashcards for each section
-            Object.keys(currentFlashcards).forEach(section => {
-                showFlashcard(section, 1);
-            });
         });
     </script>
 </body>

@@ -382,6 +382,7 @@
             padding: 1.5rem;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
+            text-align: center;
         }
         
         .flashcard-front {
@@ -399,6 +400,18 @@
             display: flex;
             justify-content: space-between;
             margin-top: 1rem;
+        }
+        
+        .flashcard-set {
+            margin-bottom: 2rem;
+        }
+        
+        .flashcard-set-title {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #ddd;
         }
         
         .search-container {
@@ -454,6 +467,71 @@
             height: 100%;
             background-color: rgba(0,0,0,0.5);
             z-index: 99;
+        }
+        
+        .glossary-term {
+            color: var(--primary-dark);
+            font-weight: bold;
+            cursor: help;
+            border-bottom: 1px dotted var(--primary-dark);
+        }
+        
+        .glossary-popup {
+            display: none;
+            position: absolute;
+            background-color: var(--white);
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            max-width: 300px;
+        }
+        
+        .glossary-term:hover + .glossary-popup {
+            display: block;
+        }
+        
+        .key-point {
+            background-color: #e1f5fe;
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .key-point-title {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+        }
+        
+        .section-nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .section-nav a.prev i {
+            margin-right: 5px;
+        }
+        
+        .section-nav a.next i {
+            margin-left: 5px;
         }
         
         @media (max-width: 768px) {
@@ -568,18 +646,57 @@
                     <h3>The Importance of Ecosystem Maintenance in Tasmania</h3>
                     <p>Welcome to your studies in Conservation and Ecosystem Management. The island of Tasmania is a place of profound natural beauty and ecological significance, recognised globally for its unique and largely intact wild areas. From the rugged peaks of Cradle Mountain and the vast, silent button-grass plains of the South West, to the tranquil bays of the East Coast and the cool, temperate rainforests of the Tarkine, our ecosystems are our most valuable asset.</p>
                     
-                    <div class="flashcard-container">
-                        <div class="flashcard" id="flashcard1">
-                            <div class="flashcard-front">
-                                <h3>What is the most significant threat to Tasmanian ecosystems?</h3>
+                    <div class="key-point">
+                        <div class="key-point-title"><i class="fas fa-lightbulb"></i> Key Point</div>
+                        <p>Tasmania's isolation has resulted in unique evolutionary pathways, making its ecosystems particularly vulnerable to introduced species and habitat disturbance.</p>
+                    </div>
+                    
+                    <div class="flashcard-set">
+                        <div class="flashcard-set-title">Tasmanian Ecosystems Flashcards</div>
+                        <div class="flashcard-container">
+                            <div class="flashcard" id="flashcard1">
+                                <div class="flashcard-front">
+                                    <h3>What is the most significant threat to Tasmanian ecosystems?</h3>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>Invasive species, habitat loss and fragmentation, climate change, and pathogens are all significant threats, with invasive species often having the most immediate impact.</p>
+                                </div>
                             </div>
-                            <div class="flashcard-back">
-                                <p>Invasive species, habitat loss and fragmentation, climate change, and pathogens are all significant threats, with invasive species often having the most immediate impact.</p>
+                            <div class="flashcard-nav">
+                                <button class="nav-button" onclick="flipCard('flashcard1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="nextCard('welcome')"><i class="fas fa-arrow-right"></i> Next</button>
                             </div>
                         </div>
-                        <div class="flashcard-nav">
-                            <button class="nav-button" onclick="flipCard('flashcard1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
-                            <button class="nav-button" onclick="nextCard()"><i class="fas fa-arrow-right"></i> Next</button>
+                        
+                        <div class="flashcard-container" style="display:none;" id="flashcard2">
+                            <div class="flashcard">
+                                <div class="flashcard-front">
+                                    <h3>What percentage of Tasmania is protected in reserves?</h3>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>Approximately 42% of Tasmania's land area is protected in reserves, one of the highest proportions of any state or territory in Australia.</p>
+                                </div>
+                            </div>
+                            <div class="flashcard-nav">
+                                <button class="nav-button" onclick="prevCard('welcome')"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('flashcard2')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="nextCard('welcome')"><i class="fas fa-arrow-right"></i> Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="flashcard-container" style="display:none;" id="flashcard3">
+                            <div class="flashcard">
+                                <div class="flashcard-front">
+                                    <h3>What is the significance of Tasmania's Gondwanan heritage?</h3>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>Tasmania contains many plant and animal lineages that date back to the supercontinent Gondwana, providing a living window into ancient ecosystems that have disappeared elsewhere.</p>
+                                </div>
+                            </div>
+                            <div class="flashcard-nav">
+                                <button class="nav-button" onclick="prevCard('welcome')"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('flashcard3')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                            </div>
                         </div>
                     </div>
                     
@@ -642,6 +759,55 @@
                         </li>
                         <li><strong>Work Schedule/Instructions:</strong> Your daily or weekly tasking from your supervisor, which should be derived directly from the higher-level plans.</li>
                     </ul>
+                    
+                    <div class="flashcard-set">
+                        <div class="flashcard-set-title">Legislation Flashcards</div>
+                        <div class="flashcard-container">
+                            <div class="flashcard" id="flashcard1-1">
+                                <div class="flashcard-front">
+                                    <h3>Which Tasmanian Act establishes the reserve system?</h3>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>The Nature Conservation Act 2002 establishes Tasmania's reserve system including National Parks and State Reserves.</p>
+                                </div>
+                            </div>
+                            <div class="flashcard-nav">
+                                <button class="nav-button" onclick="flipCard('flashcard1-1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="nextCard('section1')"><i class="fas fa-arrow-right"></i> Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="flashcard-container" style="display:none;" id="flashcard1-2">
+                            <div class="flashcard">
+                                <div class="flashcard-front">
+                                    <h3>What is the purpose of the Threatened Species Protection Act 1995?</h3>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>This Act provides for the listing and protection of threatened flora and fauna in Tasmania, ensuring their conservation and recovery.</p>
+                                </div>
+                            </div>
+                            <div class="flashcard-nav">
+                                <button class="nav-button" onclick="prevCard('section1')"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('flashcard1-2')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="nextCard('section1')"><i class="fas fa-arrow-right"></i> Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="flashcard-container" style="display:none;" id="flashcard1-3">
+                            <div class="flashcard">
+                                <div class="flashcard-front">
+                                    <h3>What does the Weed Management Act 1999 do?</h3>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>This Act declares and categorises weeds in Tasmania, placing legal responsibilities on land managers to control declared weeds.</p>
+                                </div>
+                            </div>
+                            <div class="flashcard-nav">
+                                <button class="nav-button" onclick="prevCard('section1')"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('flashcard1-3')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                            </div>
+                        </div>
+                    </div>
                     
                     <div class="activity-box">
                         <div class="activity-title"><i class="fas fa-tasks"></i> Self-Directed Activity: Analysing a Management Plan</div>
@@ -783,6 +949,55 @@
                     <h3>2.1 Carry out Maintenance of the Native Ecosystem According to the Maintenance Plan and Supervisory Requirements</h3>
                     <p>This performance criterion is about implementing the plan with precision and adhering to instructions. It requires a blend of technical skill, ecological understanding, and disciplined work practices.</p>
                     
+                    <div class="flashcard-set">
+                        <div class="flashcard-set-title">Weed Control Methods Flashcards</div>
+                        <div class="flashcard-container">
+                            <div class="flashcard" id="flashcard2-1">
+                                <div class="flashcard-front">
+                                    <h3>What is the "cut and paint" method?</h3>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>Cutting a woody weed close to the ground and immediately applying herbicide to the cut surface to prevent regrowth.</p>
+                                </div>
+                            </div>
+                            <div class="flashcard-nav">
+                                <button class="nav-button" onclick="flipCard('flashcard2-1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="nextCard('section2')"><i class="fas fa-arrow-right"></i> Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="flashcard-container" style="display:none;" id="flashcard2-2">
+                            <div class="flashcard">
+                                <div class="flashcard-front">
+                                    <h3>What is the "drill and fill" method?</h3>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>Drilling holes into the trunk of a woody weed and filling them with herbicide, used for larger trees where cutting isn't practical.</p>
+                                </div>
+                            </div>
+                            <div class="flashcard-nav">
+                                <button class="nav-button" onclick="prevCard('section2')"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('flashcard2-2')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="nextCard('section2')"><i class="fas fa-arrow-right"></i> Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="flashcard-container" style="display:none;" id="flashcard2-3">
+                            <div class="flashcard">
+                                <div class="flashcard-front">
+                                    <h3>When is foliar spraying appropriate?</h3>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>For controlling seedlings or herbaceous weeds, but must be used carefully to avoid damage to non-target plants.</p>
+                                </div>
+                            </div>
+                            <div class="flashcard-nav">
+                                <button class="nav-button" onclick="prevCard('section2')"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('flashcard2-3')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="activity-box">
                         <div class="activity-title"><i class="fas fa-file-alt"></i> Self-Directed Activity: Weed Control Strategy Report</div>
                         <p>Choose a specific Tasmanian environmental weed (e.g., Spanish Heath, English Broom, Willow). Research and write a 500-word report that outlines:</p>
@@ -796,6 +1011,11 @@
                     
                     <h3>2.2 Minimise Damage to the Environment During Maintenance Work</h3>
                     <p>This is the principle of "first, do no harm" in practice. The methods used to maintain an ecosystem must not be more damaging than the problem they are solving.</p>
+                    
+                    <div class="key-point">
+                        <div class="key-point-title"><i class="fas fa-lightbulb"></i> Key Point</div>
+                        <p>Always consider the timing of maintenance activities to avoid disturbing breeding wildlife or damaging sensitive vegetation during vulnerable growth periods.</p>
+                    </div>
                     
                     <div class="activity-box">
                         <div class="activity-title"><i class="fas fa-leaf"></i> Self-Directed Activity: Case Study - Protecting a Sensitive Site</div>
@@ -866,6 +1086,55 @@
                     <h3>3.1 Reinstate Site According to the Maintenance Plan</h3>
                     <p>Reinstatement is about actively assisting the natural recovery of the site after your intervention.</p>
                     
+                    <div class="flashcard-set">
+                        <div class="flashcard-set-title">Site Reinstatement Flashcards</div>
+                        <div class="flashcard-container">
+                            <div class="flashcard" id="flashcard3-1">
+                                <div class="flashcard-front">
+                                    <h3>What is the purpose of site reinstatement?</h3>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>To assist natural recovery, prevent erosion, reduce weed invasion, and restore ecological function after maintenance activities.</p>
+                                </div>
+                            </div>
+                            <div class="flashcard-nav">
+                                <button class="nav-button" onclick="flipCard('flashcard3-1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="nextCard('section3')"><i class="fas fa-arrow-right"></i> Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="flashcard-container" style="display:none;" id="flashcard3-2">
+                            <div class="flashcard">
+                                <div class="flashcard-front">
+                                    <h3>What are three methods for erosion control on disturbed sites?</h3>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>1. Mulching with organic material<br>2. Installing erosion control matting<br>3. Revegetating with appropriate native species</p>
+                                </div>
+                            </div>
+                            <div class="flashcard-nav">
+                                <button class="nav-button" onclick="prevCard('section3')"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('flashcard3-2')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                                <button class="nav-button" onclick="nextCard('section3')"><i class="fas fa-arrow-right"></i> Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="flashcard-container" style="display:none;" id="flashcard3-3">
+                            <div class="flashcard">
+                                <div class="flashcard-front">
+                                    <h3>Why is monitoring important after maintenance work?</h3>
+                                </div>
+                                <div class="flashcard-back">
+                                    <p>To assess the effectiveness of treatments, identify any issues requiring follow-up, and inform future management decisions.</p>
+                                </div>
+                            </div>
+                            <div class="flashcard-nav">
+                                <button class="nav-button" onclick="prevCard('section3')"><i class="fas fa-arrow-left"></i> Previous</button>
+                                <button class="nav-button" onclick="flipCard('flashcard3-3')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="activity-box">
                         <div class="activity-title"><i class="fas fa-redo"></i> Self-Directed Activity: Site Reinstatement Plan</div>
                         <p>Using the same scenario from the previous activity (gorse control in a heathland with orchids and Phytophthora risk), now develop a reinstatement plan. Detail:</p>
@@ -879,6 +1148,11 @@
                     
                     <h3>3.2 Dispose of All Waste Material</h3>
                     <p>Responsible waste disposal closes the loop on your work activity and is a legal and ethical requirement.</p>
+                    
+                    <div class="key-point">
+                        <div class="key-point-title"><i class="fas fa-lightbulb"></i> Key Point</div>
+                        <p>Always follow the hierarchy of waste management: avoid creating waste where possible, then reduce, reuse, recycle, and only as a last resort, dispose of waste appropriately.</p>
+                    </div>
                     
                     <div class="activity-box">
                         <div class="activity-title"><i class="fas fa-trash-alt"></i> Self-Directed Activity: Waste Management Flowchart</div>
@@ -1042,6 +1316,14 @@
         const tabs = ['welcome', 'section1', 'section2', 'section3', 'appendices'];
         let currentTab = 'welcome';
         
+        // Track current flashcard for each section
+        const currentFlashcards = {
+            'welcome': 1,
+            'section1': 1,
+            'section2': 1,
+            'section3': 1
+        };
+        
         function switchTab(tabId) {
             // Hide current tab
             document.getElementById(currentTab).classList.remove('active');
@@ -1059,6 +1341,11 @@
             
             // Scroll to top of content
             document.querySelector('.main-content').scrollTop = 0;
+            
+            // Reset flashcards for the new section
+            if (currentFlashcards.hasOwnProperty(tabId)) {
+                showFlashcard(tabId, 1);
+            }
         }
         
         // Progress tracking
@@ -1083,14 +1370,39 @@
             card.classList.toggle('flipped');
         }
         
-        function nextCard() {
-            // In a full implementation, this would cycle through multiple flashcards
-            alert('In a full implementation, this would show the next flashcard.');
+        function showFlashcard(section, cardNumber) {
+            // Hide all flashcards in this section
+            const flashcards = document.querySelectorAll(`#${section} .flashcard-container`);
+            flashcards.forEach(card => {
+                card.style.display = 'none';
+            });
+            
+            // Show the selected flashcard
+            const currentCard = document.querySelector(`#${section} #flashcard${section === 'welcome' ? cardNumber : `-${cardNumber}`}`);
+            if (currentCard) {
+                currentCard.style.display = 'block';
+            }
+            
+            // Update current flashcard tracking
+            currentFlashcards[section] = cardNumber;
+        }
+        
+        function nextCard(section) {
+            const maxCards = section === 'welcome' ? 3 : 3; // Adjust based on actual number of cards
+            if (currentFlashcards[section] < maxCards) {
+                showFlashcard(section, currentFlashcards[section] + 1);
+            }
+        }
+        
+        function prevCard(section) {
+            if (currentFlashcards[section] > 1) {
+                showFlashcard(section, currentFlashcards[section] - 1);
+            }
         }
         
         // Quiz submission
         function submitQuiz(quizId) {
-            const quiz = document.getElementById(quizId);
+            const quiz = document.querySelector(`#${quizId}`);
             const questions = quiz.querySelectorAll('.question');
             let allAnswered = true;
             
@@ -1159,6 +1471,11 @@
             
             // Mark welcome section as complete by default
             markSectionComplete('welcome');
+            
+            // Initialize flashcards for each section
+            Object.keys(currentFlashcards).forEach(section => {
+                showFlashcard(section, 1);
+            });
         });
     </script>
 </body>

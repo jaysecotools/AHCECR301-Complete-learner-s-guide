@@ -106,6 +106,14 @@
             min-width: 300px;
         }
         
+        .tab-container {
+            display: none;
+        }
+        
+        .tab-container.active {
+            display: block;
+        }
+        
         .section {
             background-color: var(--white);
             border-radius: var(--border-radius);
@@ -508,484 +516,518 @@
                 <div class="search-results" id="searchResults"></div>
             </div>
             <ul class="toc-list">
-                <li><a href="#welcome" data-section="welcome">1. Welcome and Introduction <span class="completion-badge"><i class="fas fa-check"></i> Complete</span></a>
+                <li><a href="#" data-tab="welcome">1. Welcome and Introduction <span class="completion-badge"><i class="fas fa-check"></i> Complete</span></a>
                     <ul class="toc-sublist">
-                        <li><a href="#importance" data-section="importance">The Importance of Ecosystem Maintenance</a></li>
-                        <li><a href="#how-to-use" data-section="how-to-use">How to Use This Guide</a></li>
-                        <li><a href="#overview" data-section="overview">Unit Overview and Elements</a></li>
+                        <li><a href="#" data-tab="welcome">The Importance of Ecosystem Maintenance</a></li>
+                        <li><a href="#" data-tab="welcome">How to Use This Guide</a></li>
+                        <li><a href="#" data-tab="welcome">Unit Overview and Elements</a></li>
                     </ul>
                 </li>
-                <li><a href="#section1" data-section="section1">2. Section 1: Prepare for Maintenance Activities</a>
+                <li><a href="#" data-tab="section1">2. Section 1: Prepare for Maintenance Activities</a>
                     <ul class="toc-sublist">
-                        <li><a href="#1.1" data-section="1.1">1.1 Identify and Confirm Maintenance Requirements</a></li>
-                        <li><a href="#1.2" data-section="1.2">1.2 Identify and Report Native Fauna, Flora and Significant Features</a></li>
-                        <li><a href="#1.3" data-section="1.3">1.3 Identify Occupational Health and Safety Hazards</a></li>
-                        <li><a href="#quiz1" data-section="quiz1">Quiz 1: Preparation & Safety</a></li>
+                        <li><a href="#" data-tab="section1">1.1 Identify and Confirm Maintenance Requirements</a></li>
+                        <li><a href="#" data-tab="section1">1.2 Identify and Report Native Fauna, Flora and Significant Features</a></li>
+                        <li><a href="#" data-tab="section1">1.3 Identify Occupational Health and Safety Hazards</a></li>
+                        <li><a href="#" data-tab="section1">Quiz 1: Preparation & Safety</a></li>
                     </ul>
                 </li>
-                <li><a href="#section2" data-section="section2">3. Section 2: Undertake Maintenance Activities</a>
+                <li><a href="#" data-tab="section2">3. Section 2: Undertake Maintenance Activities</a>
                     <ul class="toc-sublist">
-                        <li><a href="#2.1" data-section="2.1">2.1 Carry out Maintenance According to Plan</a></li>
-                        <li><a href="#2.2" data-section="2.2">2.2 Minimise Damage to the Environment</a></li>
-                        <li><a href="#2.3" data-section="2.3">2.3 Select, Use and Maintain Tools and Equipment</a></li>
-                        <li><a href="#quiz2" data-section="quiz2">Quiz 2: Practical Application</a></li>
+                        <li><a href="#" data-tab="section2">2.1 Carry out Maintenance According to Plan</a></li>
+                        <li><a href="#" data-tab="section2">2.2 Minimise Damage to the Environment</a></li>
+                        <li><a href="#" data-tab="section2">2.3 Select, Use and Maintain Tools and Equipment</a></li>
+                        <li><a href="#" data-tab="section2">Quiz 2: Practical Application</a></li>
                     </ul>
                 </li>
-                <li><a href="#section3" data-section="section3">4. Section 3: Complete Maintenance Activities</a>
+                <li><a href="#" data-tab="section3">4. Section 3: Complete Maintenance Activities</a>
                     <ul class="toc-sublist">
-                        <li><a href="#3.1" data-section="3.1">3.1 Reinstate the Site</a></li>
-                        <li><a href="#3.2" data-section="3.2">3.2 Dispose of All Waste Material</a></li>
-                        <li><a href="#3.3" data-section="3.3">3.3 Clean and Store Tools and Equipment</a></li>
-                        <li><a href="#3.4" data-section="3.4">3.4 Record and Report Work Outcomes</a></li>
-                        <li><a href="#quiz3" data-section="quiz3">Quiz 3: Completion & Reporting</a></li>
+                        <li><a href="#" data-tab="section3">3.1 Reinstate the Site</a></li>
+                        <li><a href="#" data-tab="section3">3.2 Dispose of All Waste Material</a></li>
+                        <li><a href="#" data-tab="section3">3.3 Clean and Store Tools and Equipment</a></li>
+                        <li><a href="#" data-tab="section3">3.4 Record and Report Work Outcomes</a></li>
+                        <li><a href="#" data-tab="section3">Quiz 3: Completion & Reporting</a></li>
                     </ul>
                 </li>
-                <li><a href="#appendices" data-section="appendices">5. Appendices</a>
+                <li><a href="#" data-tab="appendices">5. Appendices</a>
                     <ul class="toc-sublist">
-                        <li><a href="#appendix-a" data-section="appendix-a">Appendix A: Key Tasmanian Legislation</a></li>
-                        <li><a href="#appendix-b" data-section="appendix-b">Appendix B: Common Tasmanian Weeds</a></li>
-                        <li><a href="#appendix-c" data-section="appendix-c">Appendix C: Native Plants for Revegetation</a></li>
-                        <li><a href="#appendix-d" data-section="appendix-d">Appendix D: Useful Resources</a></li>
+                        <li><a href="#" data-tab="appendices">Appendix A: Key Tasmanian Legislation</a></li>
+                        <li><a href="#" data-tab="appendices">Appendix B: Common Tasmanian Weeds</a></li>
+                        <li><a href="#" data-tab="appendices">Appendix C: Native Plants for Revegetation</a></li>
+                        <li><a href="#" data-tab="appendices">Appendix D: Useful Resources</a></li>
                     </ul>
                 </li>
             </ul>
         </aside>
         
         <main class="main-content">
-            <section id="welcome" class="section section-complete">
-                <h2><i class="fas fa-home"></i> 1. Welcome and Introduction</h2>
-                
-                <h3 id="importance">The Importance of Ecosystem Maintenance in Tasmania</h3>
-                <p>Welcome to your studies in Conservation and Ecosystem Management. The island of Tasmania is a place of profound natural beauty and ecological significance, recognised globally for its unique and largely intact wild areas. From the rugged peaks of Cradle Mountain and the vast, silent button-grass plains of the South West, to the tranquil bays of the East Coast and the cool, temperate rainforests of the Tarkine, our ecosystems are our most valuable asset.</p>
-                
-                <div class="flashcard-container">
-                    <div class="flashcard" id="flashcard1">
-                        <div class="flashcard-front">
-                            <h3>What is the most significant threat to Tasmanian ecosystems?</h3>
+            <!-- Welcome Tab -->
+            <div id="welcome" class="tab-container active">
+                <section class="section section-complete">
+                    <h2><i class="fas fa-home"></i> 1. Welcome and Introduction</h2>
+                    
+                    <h3>The Importance of Ecosystem Maintenance in Tasmania</h3>
+                    <p>Welcome to your studies in Conservation and Ecosystem Management. The island of Tasmania is a place of profound natural beauty and ecological significance, recognised globally for its unique and largely intact wild areas. From the rugged peaks of Cradle Mountain and the vast, silent button-grass plains of the South West, to the tranquil bays of the East Coast and the cool, temperate rainforests of the Tarkine, our ecosystems are our most valuable asset.</p>
+                    
+                    <div class="flashcard-container">
+                        <div class="flashcard" id="flashcard1">
+                            <div class="flashcard-front">
+                                <h3>What is the most significant threat to Tasmanian ecosystems?</h3>
+                            </div>
+                            <div class="flashcard-back">
+                                <p>Invasive species, habitat loss and fragmentation, climate change, and pathogens are all significant threats, with invasive species often having the most immediate impact.</p>
+                            </div>
                         </div>
-                        <div class="flashcard-back">
-                            <p>Invasive species, habitat loss and fragmentation, climate change, and pathogens are all significant threats, with invasive species often having the most immediate impact.</p>
+                        <div class="flashcard-nav">
+                            <button class="nav-button" onclick="flipCard('flashcard1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
+                            <button class="nav-button" onclick="nextCard()"><i class="fas fa-arrow-right"></i> Next</button>
                         </div>
                     </div>
-                    <div class="flashcard-nav">
-                        <button class="nav-button" onclick="flipCard('flashcard1')"><i class="fas fa-sync-alt"></i> Flip Card</button>
-                        <button class="nav-button" onclick="nextCard()"><i class="fas fa-arrow-right"></i> Next</button>
-                    </div>
-                </div>
-                
-                <h3 id="how-to-use">How to Use This Guide</h3>
-                <p>This learning guide is designed to be your comprehensive companion. It breaks down the official unit requirements into logical, manageable sections. Each part of the guide:</p>
-                <ul>
-                    <li><strong>Explains the Performance Criteria:</strong> What you need to know and be able to do.</li>
-                    <li><strong>Provides Tasmanian Context:</strong> Real-world examples from our local environment.</li>
-                    <li><strong>Offers Self-Directed Activities:</strong> Practical tasks to deepen your understanding and develop your skills. These are crucial for your learning and we highly recommend you complete them.</li>
-                    <li><strong>Includes Self-Assessment Quizzes:</strong> To check your knowledge as you progress.</li>
-                </ul>
-                <p>Engage with this material actively. Take notes, ask questions of your trainer, and connect the concepts to the natural world around you.</p>
-                
-                <h3 id="overview">Unit Overview and Elements</h3>
-                <p>The unit AHCECR301 is structured around three core elements:</p>
-                <ol>
-                    <li><strong>Prepare for Maintenance Activities:</strong> The planning and safety stage.</li>
-                    <li><strong>Undertake Maintenance Activities:</strong> The practical, on-ground work.</li>
-                    <li><strong>Complete Maintenance Activities:</strong> The finishing, recording, and reporting stage.</li>
-                </ol>
-                <p>Mastery of all three elements is essential to becoming a competent and professional land manager.</p>
-            </section>
-            
-            <section id="section1" class="section">
-                <h2><i class="fas fa-clipboard-check"></i> 2. Section 1: Prepare for Maintenance Activities</h2>
-                <p>Thorough preparation is the single most important factor in the success of any ecosystem maintenance project. Rushing this stage leads to wasted effort, potential damage to the environment, and safety risks.</p>
-                
-                <h3 id="1.1">1.1 Identify and Confirm Maintenance Requirements of the Site</h3>
-                <p>This is about understanding the "what," "why," and "how" of your task before you even set foot on the site.</p>
-                
-                <h4>The Planning Hierarchy: From Legislation to Daily Tasks</h4>
-                <p>Maintenance work doesn't happen in a vacuum. It is part of a larger framework:</p>
-                <ul>
-                    <li><strong>International Agreements:</strong> (e.g., Convention on Biological Diversity) influence national policy.</li>
-                    <li><strong>Commonwealth Legislation:</strong> (e.g., Environment Protection and Biodiversity Conservation Act 1999 - EPBC Act) protects matters of national environmental significance, like the World Heritage-listed Tasmanian Wilderness.</li>
-                    <li><strong>Tasmanian Legislation and Policy:</strong> This is the most direct layer of regulation. Key Acts include:
-                        <ul>
-                            <li><strong>Nature Conservation Act 2002:</strong> Establishes the reserve system (National Parks, State Reserves) and provides for the management of flora and fauna.</li>
-                            <li><strong>Threatened Species Protection Act 1995:</strong> Provides for the listing and protection of threatened flora and fauna. Knowing the listed species in your work area is non-negotiable.</li>
-                            <li><strong>Weed Management Act 1999:</strong> Declares and categorises weeds (e.g., Declared Weeds), placing legal responsibilities on land managers to control them.</li>
-                            <li><strong>Forest Practices Act 1985:</strong> Regulates forestry operations on both public and private land, including requirements for biodiversity protection.</li>
-                            <li><strong>Aboriginal Heritage Act 1975:</strong> Protects Aboriginal cultural heritage. It is an offence to disturb, alter, or damage a relic or site.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Regional and Site-Specific Plans:</strong> This is where the broad legislation is translated into on-ground action.
-                        <ul>
-                            <li><strong>Weed Management Plans:</strong> Outline priority weeds, control methods, monitoring protocols, and performance indicators for a specific area.</li>
-                            <li><strong>Fire Management Plans:</strong> Detail fuel reduction burning, asset protection, and ecological fire regimes. They define when, where, and how fire can be used as a management tool.</li>
-                            <li><strong>Revegetation Plans:</strong> Specify site preparation, species lists (emphasising local provenance seed), planting densities, and aftercare requirements.</li>
-                            <li><strong>Threatened Species Recovery Plans:</strong> Outline specific, targeted actions to protect and recover a listed species, which may include habitat management or restrictions on work timing.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Work Schedule/Instructions:</strong> Your daily or weekly tasking from your supervisor, which should be derived directly from the higher-level plans.</li>
-                </ul>
-                
-                <div class="activity-box">
-                    <div class="activity-title"><i class="fas fa-tasks"></i> Self-Directed Activity: Analysing a Management Plan</div>
-                    <p>Go to the Tasmanian Parks and Wildlife Service website. Find the Management Plan for a reserve near you (e.g., Freycinet National Park, Peter Murrell Reserve). Read through the plan and answer the following:</p>
+                    
+                    <h3>How to Use This Guide</h3>
+                    <p>This learning guide is designed to be your comprehensive companion. It breaks down the official unit requirements into logical, manageable sections. Each part of the guide:</p>
+                    <ul>
+                        <li><strong>Explains the Performance Criteria:</strong> What you need to know and be able to do.</li>
+                        <li><strong>Provides Tasmanian Context:</strong> Real-world examples from our local environment.</li>
+                        <li><strong>Offers Self-Directed Activities:</strong> Practical tasks to deepen your understanding and develop your skills. These are crucial for your learning and we highly recommend you complete them.</li>
+                        <li><strong>Includes Self-Assessment Quizzes:</strong> To check your knowledge as you progress.</li>
+                    </ul>
+                    <p>Engage with this material actively. Take notes, ask questions of your trainer, and connect the concepts to the natural world around you.</p>
+                    
+                    <h3>Unit Overview and Elements</h3>
+                    <p>The unit AHCECR301 is structured around three core elements:</p>
                     <ol>
-                        <li>What are the key conservation values (e.g., specific ecosystems, threatened species, geomorphological features) identified for the area?</li>
-                        <li>List three significant threats to these values.</li>
-                        <li>What are two specific maintenance or management objectives mentioned in the plan?</li>
-                        <li>How does the plan address visitor access and its impact on the ecosystem?</li>
+                        <li><strong>Prepare for Maintenance Activities:</strong> The planning and safety stage.</li>
+                        <li><strong>Undertake Maintenance Activities:</strong> The practical, on-ground work.</li>
+                        <li><strong>Complete Maintenance Activities:</strong> The finishing, recording, and reporting stage.</li>
                     </ol>
+                    <p>Mastery of all three elements is essential to becoming a competent and professional land manager.</p>
+                </section>
+                
+                <div class="nav-buttons">
+                    <button class="nav-button" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button class="nav-button" onclick="switchTab('section1')">Next: Section 1 <i class="fas fa-arrow-right"></i></button>
                 </div>
-                
-                <h3 id="1.2">1.2 Identify and Report Native Fauna and Flora and Significant Features</h3>
-                <p>A core principle of ecological work is to "first, do no harm." This means being able to recognise and protect the valuable assets within your work site.</p>
-                
-                <h4>Tasmanian Ecosystems: A Primer</h4>
-                <p>Tasmania's ecology is dominated by its cool, temperate climate, geological history, and complex topography. Key terrestrial ecosystems include:</p>
-                <ul>
-                    <li><strong>Rainforests:</strong> Dense, damp forests dominated by myrtle beech (Nothofagus cunninghamii), sassafras (Atherosperma moschatum), and leatherwood (Eucryphia lucida). They are often rich in mosses, ferns, and lichens and are sensitive to fire and disturbance.</li>
-                    <li><strong>Eucalypt Forests:</strong> Ranging from tall wet eucalypt forests with Eucalyptus regnans (Swamp Gum, the world's tallest flowering plant) to drier forests with E. obliqua (Stringybark) and E. amygdalina (Black Peppermint). These forests are fire-adapted but vulnerable to high-intensity fires.</li>
-                    <li><strong>Alpine and Sub-alpine:</strong> Characterised by low-growing, hardy plants like cushion plants, snow gums (E. coccifera), and pencil pines (Athrotaxis cupressoides) on the Central Plateau. These areas are extremely sensitive to trampling and climate change.</li>
-                    <li><strong>Buttongrass Moorlands:</strong> A vast, fire-adapted ecosystem in the South West, dominated by Gymnoschoenus sphaerocephalus, and home to unique fauna like the ground parrot. They are nutrient-poor systems.</li>
-                    <li><strong>Coastal Heathlands:</strong> Wind-sheared, shrub-dominated communities on coastal dunes and headlands, featuring banksias, tea-trees, and correas. They are crucial for stabilising soils and provide habitat for many invertebrates and birds.</li>
-                </ul>
-                
-                <div class="activity-box">
-                    <div class="activity-title"><i class="fas fa-search"></i> Self-Directed Activity: Natural Values Atlas Investigation</div>
-                    <ol>
-                        <li>Access the Tasmanian Government's Natural Values Atlas (NVA).</li>
-                        <li>Search for your local suburb or a nearby reserve.</li>
-                        <li>Generate a report and identify:
+            </div>
+            
+            <!-- Section 1 Tab -->
+            <div id="section1" class="tab-container">
+                <section class="section">
+                    <h2><i class="fas fa-clipboard-check"></i> 2. Section 1: Prepare for Maintenance Activities</h2>
+                    <p>Thorough preparation is the single most important factor in the success of any ecosystem maintenance project. Rushing this stage leads to wasted effort, potential damage to the environment, and safety risks.</p>
+                    
+                    <h3>1.1 Identify and Confirm Maintenance Requirements of the Site</h3>
+                    <p>This is about understanding the "what," "why," and "how" of your task before you even set foot on the site.</p>
+                    
+                    <h4>The Planning Hierarchy: From Legislation to Daily Tasks</h4>
+                    <p>Maintenance work doesn't happen in a vacuum. It is part of a larger framework:</p>
+                    <ul>
+                        <li><strong>International Agreements:</strong> (e.g., Convention on Biological Diversity) influence national policy.</li>
+                        <li><strong>Commonwealth Legislation:</strong> (e.g., Environment Protection and Biodiversity Conservation Act 1999 - EPBC Act) protects matters of national environmental significance, like the World Heritage-listed Tasmanian Wilderness.</li>
+                        <li><strong>Tasmanian Legislation and Policy:</strong> This is the most direct layer of regulation. Key Acts include:
                             <ul>
-                                <li>Two threatened plant species listed for the area.</li>
-                                <li>Two threatened animal species.</li>
-                                <li>One "significant community" (e.g., a specific type of forest or wetland).</li>
+                                <li><strong>Nature Conservation Act 2002:</strong> Establishes the reserve system (National Parks, State Reserves) and provides for the management of flora and fauna.</li>
+                                <li><strong>Threatened Species Protection Act 1995:</strong> Provides for the listing and protection of threatened flora and fauna. Knowing the listed species in your work area is non-negotiable.</li>
+                                <li><strong>Weed Management Act 1999:</strong> Declares and categorises weeds (e.g., Declared Weeds), placing legal responsibilities on land managers to control them.</li>
+                                <li><strong>Forest Practices Act 1985:</strong> Regulates forestry operations on both public and private land, including requirements for biodiversity protection.</li>
+                                <li><strong>Aboriginal Heritage Act 1975:</strong> Protects Aboriginal cultural heritage. It is an offence to disturb, alter, or damage a relic or site.</li>
                             </ul>
                         </li>
-                        <li>For one of the threatened species, research its specific habitat requirements and key identifying features. Present your findings in a short paragraph.</li>
-                    </ol>
+                        <li><strong>Regional and Site-Specific Plans:</strong> This is where the broad legislation is translated into on-ground action.
+                            <ul>
+                                <li><strong>Weed Management Plans:</strong> Outline priority weeds, control methods, monitoring protocols, and performance indicators for a specific area.</li>
+                                <li><strong>Fire Management Plans:</strong> Detail fuel reduction burning, asset protection, and ecological fire regimes. They define when, where, and how fire can be used as a management tool.</li>
+                                <li><strong>Revegetation Plans:</strong> Specify site preparation, species lists (emphasising local provenance seed), planting densities, and aftercare requirements.</li>
+                                <li><strong>Threatened Species Recovery Plans:</strong> Outline specific, targeted actions to protect and recover a listed species, which may include habitat management or restrictions on work timing.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Work Schedule/Instructions:</strong> Your daily or weekly tasking from your supervisor, which should be derived directly from the higher-level plans.</li>
+                    </ul>
+                    
+                    <div class="activity-box">
+                        <div class="activity-title"><i class="fas fa-tasks"></i> Self-Directed Activity: Analysing a Management Plan</div>
+                        <p>Go to the Tasmanian Parks and Wildlife Service website. Find the Management Plan for a reserve near you (e.g., Freycinet National Park, Peter Murrell Reserve). Read through the plan and answer the following:</p>
+                        <ol>
+                            <li>What are the key conservation values (e.g., specific ecosystems, threatened species, geomorphological features) identified for the area?</li>
+                            <li>List three significant threats to these values.</li>
+                            <li>What are two specific maintenance or management objectives mentioned in the plan?</li>
+                            <li>How does the plan address visitor access and its impact on the ecosystem?</li>
+                        </ol>
+                    </div>
+                    
+                    <h3>1.2 Identify and Report Native Fauna and Flora and Significant Features</h3>
+                    <p>A core principle of ecological work is to "first, do no harm." This means being able to recognise and protect the valuable assets within your work site.</p>
+                    
+                    <h4>Tasmanian Ecosystems: A Primer</h4>
+                    <p>Tasmania's ecology is dominated by its cool, temperate climate, geological history, and complex topography. Key terrestrial ecosystems include:</p>
+                    <ul>
+                        <li><strong>Rainforests:</strong> Dense, damp forests dominated by myrtle beech (Nothofagus cunninghamii), sassafras (Atherosperma moschatum), and leatherwood (Eucryphia lucida). They are often rich in mosses, ferns, and lichens and are sensitive to fire and disturbance.</li>
+                        <li><strong>Eucalypt Forests:</strong> Ranging from tall wet eucalypt forests with Eucalyptus regnans (Swamp Gum, the world's tallest flowering plant) to drier forests with E. obliqua (Stringybark) and E. amygdalina (Black Peppermint). These forests are fire-adapted but vulnerable to high-intensity fires.</li>
+                        <li><strong>Alpine and Sub-alpine:</strong> Characterised by low-growing, hardy plants like cushion plants, snow gums (E. coccifera), and pencil pines (Athrotaxis cupressoides) on the Central Plateau. These areas are extremely sensitive to trampling and climate change.</li>
+                        <li><strong>Buttongrass Moorlands:</strong> A vast, fire-adapted ecosystem in the South West, dominated by Gymnoschoenus sphaerocephalus, and home to unique fauna like the ground parrot. They are nutrient-poor systems.</li>
+                        <li><strong>Coastal Heathlands:</strong> Wind-sheared, shrub-dominated communities on coastal dunes and headlands, featuring banksias, tea-trees, and correas. They are crucial for stabilising soils and provide habitat for many invertebrates and birds.</li>
+                    </ul>
+                    
+                    <div class="activity-box">
+                        <div class="activity-title"><i class="fas fa-search"></i> Self-Directed Activity: Natural Values Atlas Investigation</div>
+                        <ol>
+                            <li>Access the Tasmanian Government's Natural Values Atlas (NVA).</li>
+                            <li>Search for your local suburb or a nearby reserve.</li>
+                            <li>Generate a report and identify:
+                                <ul>
+                                    <li>Two threatened plant species listed for the area.</li>
+                                    <li>Two threatened animal species.</li>
+                                    <li>One "significant community" (e.g., a specific type of forest or wetland).</li>
+                                </ul>
+                            </li>
+                            <li>For one of the threatened species, research its specific habitat requirements and key identifying features. Present your findings in a short paragraph.</li>
+                        </ol>
+                    </div>
+                    
+                    <h3>1.3 Identify Occupational Health and Safety Hazards and Report to Supervisor</h3>
+                    <p>Your safety, and the safety of your colleagues, is paramount. The remote and rugged nature of much of Tasmania's landscape makes risk management non-negotiable.</p>
+                    
+                    <h4>Personal Protective Equipment (PPE)</h4>
+                    <p>PPE is your last line of defence. Standard PPE for field work includes:</p>
+                    <ul>
+                        <li>Sturdy boots (steel-capped, ankle support)</li>
+                        <li>Long pants and long-sleeved shirt (to protect from sun, scratches, and insects)</li>
+                        <li>Safety glasses</li>
+                        <li>Gloves (appropriate for the task, e.g., leather for handling woody weeds, chemical-resistant for spraying)</li>
+                        <li>Hearing protection (for power tools)</li>
+                        <li>High-visibility clothing (if working near tracks or roads)</li>
+                    </ul>
+                    
+                    <div class="activity-box">
+                        <div class="activity-title"><i class="fas fa-hard-hat"></i> Self-Directed Activity: Developing a Job Safety Analysis (JSA)</div>
+                        <p>Develop a detailed JSA for the task of manually removing gorse (using loppers and handsaws) in an area with rough, uneven terrain and a dense understorey that includes native laurels.</p>
+                        <p>Use a table with the following headings:</p>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Job Step</th>
+                                        <th>Hazard</th>
+                                        <th>Risk</th>
+                                        <th>Control Measures</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Travel to site</td>
+                                        <td>Uneven ground, hidden holes</td>
+                                        <td>Tripping, falls, sprains</td>
+                                        <td>Walk carefully, use a pole to probe ground, wear sturdy ankle-supporting boots.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cutting gorse</td>
+                                        <td>Sharp thorns, repetitive strain, native laurel sap</td>
+                                        <td>Cuts, scratches, muscular injury, severe skin and eye irritation</td>
+                                        <td>Wear leather gloves, long sleeves, and safety glasses. Use correct lifting/cutting techniques, take regular breaks. Be aware of nearby laurels; avoid contacting sap.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Moving debris</td>
+                                        <td>Thorns, heavy lifting, uneven terrain</td>
+                                        <td>Cuts, back injury, trips</td>
+                                        <td>Wear gloves, use correct manual handling techniques (bend knees, keep back straight), clear a safe path.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>...</td>
+                                        <td>...</td>
+                                        <td>...</td>
+                                        <td>...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Complete the JSA for all steps, including tool transport, work, and clean-up.</p>
+                    </div>
+                    
+                    <div class="quiz-container">
+                        <div class="quiz-title"><i class="fas fa-question-circle"></i> Quiz 1: Preparation & Safety</div>
+                        <div class="question">
+                            <div class="question-text">1. Explain the difference between a Threatened Species Recovery Plan and a Weed Management Plan. What is the primary focus of each?</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <div class="question">
+                            <div class="question-text">2. You are about to start a revegetation project in a coastal heathland. Name two key pieces of Tasmanian legislation you should be aware of and briefly explain why each is relevant.</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <div class="question">
+                            <div class="question-text">3. Describe the correct procedure if you discover a previously unrecorded Aboriginal midden (a scatter of stone artefacts) during weed control operations.</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <div class="question">
+                            <div class="question-text">4. List the minimum PPE you would wear for manually clearing a blackberry thicket in a damp gully and state the purpose of each item.</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <div class="question">
+                            <div class="question-text">5. What are the symptoms of hypothermia and what are the first three actions you should take if a team member shows signs of it?</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <button class="nav-button" onclick="submitQuiz('quiz1')"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
+                    </div>
+                </section>
+                
+                <div class="nav-buttons">
+                    <button class="nav-button" onclick="switchTab('welcome')"><i class="fas fa-arrow-left"></i> Previous: Welcome</button>
+                    <button class="nav-button" onclick="switchTab('section2')">Next: Section 2 <i class="fas fa-arrow-right"></i></button>
                 </div>
+            </div>
+            
+            <!-- Section 2 Tab -->
+            <div id="section2" class="tab-container">
+                <section class="section">
+                    <h2><i class="fas fa-tools"></i> 3. Section 2: Undertake Maintenance Activities</h2>
+                    <p>This section covers the practical application of your knowledge and skills. It is the "on-ground" phase where planning meets action. The emphasis here is on executing tasks effectively, efficiently, and with minimal negative impact on the very environment you are working to maintain.</p>
+                    
+                    <h3>2.1 Carry out Maintenance of the Native Ecosystem According to the Maintenance Plan and Supervisory Requirements</h3>
+                    <p>This performance criterion is about implementing the plan with precision and adhering to instructions. It requires a blend of technical skill, ecological understanding, and disciplined work practices.</p>
+                    
+                    <div class="activity-box">
+                        <div class="activity-title"><i class="fas fa-file-alt"></i> Self-Directed Activity: Weed Control Strategy Report</div>
+                        <p>Choose a specific Tasmanian environmental weed (e.g., Spanish Heath, English Broom, Willow). Research and write a 500-word report that outlines:</p>
+                        <ol>
+                            <li><strong>Identification:</strong> Key features to identify it.</li>
+                            <li><strong>Ecology:</strong> Its life cycle, reproduction, and dispersal method.</li>
+                            <li><strong>Impact:</strong> The specific threat it poses to Tasmanian ecosystems.</li>
+                            <li><strong>Control Strategy:</strong> A detailed, integrated plan for its control, including at least two different methods (e.g., manual and chemical), the best timing for control, and how you would dispose of the waste material.</li>
+                        </ol>
+                    </div>
+                    
+                    <h3>2.2 Minimise Damage to the Environment During Maintenance Work</h3>
+                    <p>This is the principle of "first, do no harm" in practice. The methods used to maintain an ecosystem must not be more damaging than the problem they are solving.</p>
+                    
+                    <div class="activity-box">
+                        <div class="activity-title"><i class="fas fa-leaf"></i> Self-Directed Activity: Case Study - Protecting a Sensitive Site</div>
+                        <p><strong>Scenario:</strong> You have been tasked with controlling a patch of gorse (Ulex europaeus) that is invading a healthy patch of native heathland. Within the heathland, you have identified several populations of the vulnerable orchid Caladenia tonellii (Robust Fingers) and you know the soil is potentially infected with Phytophthora cinnamomi.</p>
+                        <p><strong>Task:</strong> Develop a step-by-step work procedure that details how you will control the gorse while:</p>
+                        <ul>
+                            <li>Preventing the spread of Phytophthora.</li>
+                            <li>Ensuring no damage to the native heathland vegetation or the orchids.</li>
+                            <li>Ensuring the safety of the work crew.</li>
+                        </ul>
+                        <p>Your procedure should specify tools, methods, hygiene protocols, and any timing considerations.</p>
+                    </div>
+                    
+                    <h3>2.3 Select, Use and Maintain Tools and Equipment</h3>
+                    <p>The right tool, used correctly and kept in good condition, is fundamental to safe and efficient work.</p>
+                    
+                    <div class="activity-box">
+                        <div class="activity-title"><i class="fas fa-wrench"></i> Self-Directed Activity: Tool Maintenance Log</div>
+                        <p>Create a digital or physical "Tool Maintenance Logbook." For one week, practice using and maintaining a set of hand tools (e.g., loppers, handsaw, mattock). After each use, log the following:</p>
+                        <ul>
+                            <li>Date and Tool Used.</li>
+                            <li>Task it was used for.</li>
+                            <li>Condition before use (e.g., sharp, clean, loose handle?).</li>
+                            <li>Maintenance performed after use (e.g., cleaned with wire brush, washed, dried, oiled, sharpened).</li>
+                            <li>Any repairs needed.</li>
+                        </ul>
+                        <p>This habit is a cornerstone of professional practice.</p>
+                    </div>
+                    
+                    <div class="quiz-container">
+                        <div class="quiz-title"><i class="fas fa-question-circle"></i> Quiz 2: Practical Application</div>
+                        <div class="question">
+                            <div class="question-text">1. Compare and contrast the "cut and paint" and "drill and fill" methods for woody weed control. When would you choose one over the other?</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <div class="question">
+                            <div class="question-text">2. You need to control weeds along a creek bank that is a known habitat for the Giant Freshwater Lobster. What specific precautions must you take when selecting and applying a herbicide?</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <div class="question">
+                            <div class="question-text">3. Explain the term "local provenance" in the context of revegetation. Why is it a critical principle in Tasmanian ecosystem restoration?</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <div class="question">
+                            <div class="question-text">4. Create a step-by-step checklist for the safe operation and post-use maintenance of a knapsack sprayer.</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <div class="question">
+                            <div class="question-text">5. What is Phytophthora root rot and what are three specific hygiene practices to prevent its spread?</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <button class="nav-button" onclick="submitQuiz('quiz2')"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
+                    </div>
+                </section>
                 
-                <h3 id="1.3">1.3 Identify Occupational Health and Safety Hazards and Report to Supervisor</h3>
-                <p>Your safety, and the safety of your colleagues, is paramount. The remote and rugged nature of much of Tasmania's landscape makes risk management non-negotiable.</p>
+                <div class="nav-buttons">
+                    <button class="nav-button" onclick="switchTab('section1')"><i class="fas fa-arrow-left"></i> Previous: Section 1</button>
+                    <button class="nav-button" onclick="switchTab('section3')">Next: Section 3 <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- Section 3 Tab -->
+            <div id="section3" class="tab-container">
+                <section class="section">
+                    <h2><i class="fas fa-check-circle"></i> 4. Section 3: Complete Maintenance Activities</h2>
+                    <p>The final stage of the work process is often the most neglected but is equally as important as the preparation and execution. Proper completion ensures the long-term success of the work, the safety of the site, and provides valuable data for future management.</p>
+                    
+                    <h3>3.1 Reinstate Site According to the Maintenance Plan</h3>
+                    <p>Reinstatement is about actively assisting the natural recovery of the site after your intervention.</p>
+                    
+                    <div class="activity-box">
+                        <div class="activity-title"><i class="fas fa-redo"></i> Self-Directed Activity: Site Reinstatement Plan</div>
+                        <p>Using the same scenario from the previous activity (gorse control in a heathland with orchids and Phytophthora risk), now develop a reinstatement plan. Detail:</p>
+                        <ol>
+                            <li>What will you do with the cut gorse material? (Justify your choice based on biosecurity and ecological principles).</li>
+                            <li>How will you treat the soil that has been disturbed around the gorse plants to prevent erosion and weed invasion?</li>
+                            <li>What measures, if any, will you put in place to encourage the native heathland to recolonise the area?</li>
+                            <li>How will you mark the area for future monitoring?</li>
+                        </ol>
+                    </div>
+                    
+                    <h3>3.2 Dispose of All Waste Material</h3>
+                    <p>Responsible waste disposal closes the loop on your work activity and is a legal and ethical requirement.</p>
+                    
+                    <div class="activity-box">
+                        <div class="activity-title"><i class="fas fa-trash-alt"></i> Self-Directed Activity: Waste Management Flowchart</div>
+                        <p>Create a single-page, visual flowchart to guide decision-making for waste disposal on a conservation worksite. It should have "decision diamonds" asking questions like:</p>
+                        <ul>
+                            <li>"Is the material a declared weed that can resprout or set seed?"</li>
+                            <li>"Is the material suitable for habitat?"</li>
+                            <li>"Is the material a chemical container?"</li>
+                        </ul>
+                        <p>This will provide a clear, at-a-glance guide for you and your team.</p>
+                    </div>
+                    
+                    <h3>3.3 Clean and Store Tools and Equipment</h3>
+                    <p>This routine is vital for the longevity of equipment, cost-control for your organisation, and safety for the next user.</p>
+                    
+                    <h3>3.4 Record and Report Work Outcomes</h3>
+                    <p>If it wasn't recorded, it wasn't done. Documentation provides the evidence of your work, informs future management, and is essential for accountability.</p>
+                    
+                    <div class="activity-box">
+                        <div class="activity-title"><i class="fas fa-clipboard-list"></i> Self-Directed Activity: Writing a Professional Field Report</div>
+                        <p>Using the following scenario, write a full and professional field report.</p>
+                        <p><strong>Scenario:</strong> On November 15th, 2024, you and a colleague (Jane Doe) spent the day at the "North-South Track" in the Peter Murrell Reserve. The task was to control broom seedlings in a 50m x 50m area that was treated for mature broom last year. The weather was fine and sunny, 18°C. You used a knapsack sprayer with a 1% solution of Glyphosate (as per the product label) and treated approximately 250 seedlings. You noticed several native Correa alba plants flowering healthily within the treatment area and took care to avoid spraying them. At 2:15 PM, Jane slightly twisted her ankle on a hidden hole but was able to walk back to the vehicle. You finished at 3:30 PM, cleaned all equipment, and left the site tidy. You recommend a monitoring visit in 6 months to check for any missed plants.</p>
+                        <p>Structure your report with clear headings (e.g., Site Details, Personnel, Work Summary, Observations, Incidents, Recommendations).</p>
+                    </div>
+                    
+                    <div class="quiz-container">
+                        <div class="quiz-title"><i class="fas fa-question-circle"></i> Quiz 3: Completion & Reporting</div>
+                        <div class="question">
+                            <div class="question-text">1. Describe three different methods for responsibly disposing of green waste from a vegetation clearing project and the situations where each would be appropriate.</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <div class="question">
+                            <div class="question-text">2. Why is it often better to chip and mulch green waste on-site rather than burning it or taking it to a tip? Provide two ecological and one practical reason.</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <div class="question">
+                            <div class="question-text">3. What information, beyond the basic "what, where, and when," is valuable to include in a final field report for a maintenance project? (List at least 5 items).</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <div class="question">
+                            <div class="question-text">4. A community group has volunteered to help with a planting day. Write a brief set of instructions for them on how to correctly clean and store the hand trowels and shovels at the end of the day.</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <div class="question">
+                            <div class="question-text">5. Explain the purpose of the DrumMUSTER program and the correct procedure for preparing a 10L herbicide container for collection.</div>
+                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        </div>
+                        <button class="nav-button" onclick="submitQuiz('quiz3')"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
+                    </div>
+                </section>
                 
-                <h4>Personal Protective Equipment (PPE)</h4>
-                <p>PPE is your last line of defence. Standard PPE for field work includes:</p>
-                <ul>
-                    <li>Sturdy boots (steel-capped, ankle support)</li>
-                    <li>Long pants and long-sleeved shirt (to protect from sun, scratches, and insects)</li>
-                    <li>Safety glasses</li>
-                    <li>Gloves (appropriate for the task, e.g., leather for handling woody weeds, chemical-resistant for spraying)</li>
-                    <li>Hearing protection (for power tools)</li>
-                    <li>High-visibility clothing (if working near tracks or roads)</li>
-                </ul>
-                
-                <div class="activity-box">
-                    <div class="activity-title"><i class="fas fa-hard-hat"></i> Self-Directed Activity: Developing a Job Safety Analysis (JSA)</div>
-                    <p>Develop a detailed JSA for the task of manually removing gorse (using loppers and handsaws) in an area with rough, uneven terrain and a dense understorey that includes native laurels.</p>
-                    <p>Use a table with the following headings:</p>
+                <div class="nav-buttons">
+                    <button class="nav-button" onclick="switchTab('section2')"><i class="fas fa-arrow-left"></i> Previous: Section 2</button>
+                    <button class="nav-button" onclick="switchTab('appendices')">Next: Appendices <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- Appendices Tab -->
+            <div id="appendices" class="tab-container">
+                <section class="section">
+                    <h2><i class="fas fa-book"></i> 5. Appendices</h2>
+                    
+                    <h3>Appendix A: Key Tasmanian Legislation and Policies</h3>
+                    <ul>
+                        <li>Nature Conservation Act 2002</li>
+                        <li>Threatened Species Protection Act 1995</li>
+                        <li>Weed Management Act 1999</li>
+                        <li>Forest Practices Act 1985</li>
+                        <li>Aboriginal Heritage Act 1975</li>
+                        <li>Environmental Management and Pollution Control Act 1994</li>
+                        <li>Work Health and Safety Act 2012</li>
+                        <li>Fire Service Act 1979</li>
+                    </ul>
+                    
+                    <h3>Appendix B: Common Tasmanian Weeds and Control Methods</h3>
                     <div class="table-container">
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Job Step</th>
-                                    <th>Hazard</th>
-                                    <th>Risk</th>
-                                    <th>Control Measures</th>
+                                    <th>Weed</th>
+                                    <th>Key Identification</th>
+                                    <th>Impact</th>
+                                    <th>Recommended Control Methods</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Travel to site</td>
-                                    <td>Uneven ground, hidden holes</td>
-                                    <td>Tripping, falls, sprains</td>
-                                    <td>Walk carefully, use a pole to probe ground, wear sturdy ankle-supporting boots.</td>
+                                    <td>Gorse (Ulex europaeus)</td>
+                                    <td>Dense, spiny shrub, yellow flowers.</td>
+                                    <td>Smothers native vegetation, forms impenetrable thickets.</td>
+                                    <td>Cut and paint, foliar spray (for seedlings), biological control (gorse spider mite).</td>
                                 </tr>
                                 <tr>
-                                    <td>Cutting gorse</td>
-                                    <td>Sharp thorns, repetitive strain, native laurel sap</td>
-                                    <td>Cuts, scratches, muscular injury, severe skin and eye irritation</td>
-                                    <td>Wear leather gloves, long sleeves, and safety glasses. Use correct lifting/cutting techniques, take regular breaks. Be aware of nearby laurels; avoid contacting sap.</td>
+                                    <td>Broom (Cytisus scoparius)</td>
+                                    <td>Tall shrub, green ribbed stems, bright yellow flowers.</td>
+                                    <td>Forms dense stands, fixes nitrogen altering soil chemistry.</td>
+                                    <td>Cut and paint, foliar spray, hand-pull seedlings.</td>
                                 </tr>
                                 <tr>
-                                    <td>Moving debris</td>
-                                    <td>Thorns, heavy lifting, uneven terrain</td>
-                                    <td>Cuts, back injury, trips</td>
-                                    <td>Wear gloves, use correct manual handling techniques (bend knees, keep back straight), clear a safe path.</td>
+                                    <td>Spanish Heath (Erica lusitanica)</td>
+                                    <td>Fine-leaved shrub, small white/pink flowers.</td>
+                                    <td>Invades heathlands and grasslands, forms monocultures.</td>
+                                    <td>Cut and paint, foliar spray.</td>
                                 </tr>
                                 <tr>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
+                                    <td>Arum Lily (Zantedeschia aethiopica)</td>
+                                    <td>Large, arrow-shaped leaves, white flower spathe.</td>
+                                    <td>Invades damp areas, replaces native riparian vegetation.</td>
+                                    <td>Dig out tubers, foliar spray.</td>
+                                </tr>
+                                <tr>
+                                    <td>Willows (Salix spp.)</td>
+                                    <td>Trees, long thin leaves.</td>
+                                    <td>Invades waterways, destabilises banks, shades out natives.</td>
+                                    <td>Stem injection, cut and paint.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p>Complete the JSA for all steps, including tool transport, work, and clean-up.</p>
-                </div>
-                
-                <div id="quiz1" class="quiz-container">
-                    <div class="quiz-title"><i class="fas fa-question-circle"></i> Quiz 1: Preparation & Safety</div>
-                    <div class="question">
-                        <div class="question-text">1. Explain the difference between a Threatened Species Recovery Plan and a Weed Management Plan. What is the primary focus of each?</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <div class="question">
-                        <div class="question-text">2. You are about to start a revegetation project in a coastal heathland. Name two key pieces of Tasmanian legislation you should be aware of and briefly explain why each is relevant.</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <div class="question">
-                        <div class="question-text">3. Describe the correct procedure if you discover a previously unrecorded Aboriginal midden (a scatter of stone artefacts) during weed control operations.</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <div class="question">
-                        <div class="question-text">4. List the minimum PPE you would wear for manually clearing a blackberry thicket in a damp gully and state the purpose of each item.</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <div class="question">
-                        <div class="question-text">5. What are the symptoms of hypothermia and what are the first three actions you should take if a team member shows signs of it?</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <button class="nav-button" onclick="submitQuiz('quiz1')"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
-                </div>
-            </section>
-            
-            <section id="section2" class="section">
-                <h2><i class="fas fa-tools"></i> 3. Section 2: Undertake Maintenance Activities</h2>
-                <p>This section covers the practical application of your knowledge and skills. It is the "on-ground" phase where planning meets action. The emphasis here is on executing tasks effectively, efficiently, and with minimal negative impact on the very environment you are working to maintain.</p>
-                
-                <h3 id="2.1">2.1 Carry out Maintenance of the Native Ecosystem According to the Maintenance Plan and Supervisory Requirements</h3>
-                <p>This performance criterion is about implementing the plan with precision and adhering to instructions. It requires a blend of technical skill, ecological understanding, and disciplined work practices.</p>
-                
-                <div class="activity-box">
-                    <div class="activity-title"><i class="fas fa-file-alt"></i> Self-Directed Activity: Weed Control Strategy Report</div>
-                    <p>Choose a specific Tasmanian environmental weed (e.g., Spanish Heath, English Broom, Willow). Research and write a 500-word report that outlines:</p>
-                    <ol>
-                        <li><strong>Identification:</strong> Key features to identify it.</li>
-                        <li><strong>Ecology:</strong> Its life cycle, reproduction, and dispersal method.</li>
-                        <li><strong>Impact:</strong> The specific threat it poses to Tasmanian ecosystems.</li>
-                        <li><strong>Control Strategy:</strong> A detailed, integrated plan for its control, including at least two different methods (e.g., manual and chemical), the best timing for control, and how you would dispose of the waste material.</li>
-                    </ol>
-                </div>
-                
-                <h3 id="2.2">2.2 Minimise Damage to the Environment During Maintenance Work</h3>
-                <p>This is the principle of "first, do no harm" in practice. The methods used to maintain an ecosystem must not be more damaging than the problem they are solving.</p>
-                
-                <div class="activity-box">
-                    <div class="activity-title"><i class="fas fa-leaf"></i> Self-Directed Activity: Case Study - Protecting a Sensitive Site</div>
-                    <p><strong>Scenario:</strong> You have been tasked with controlling a patch of gorse (Ulex europaeus) that is invading a healthy patch of native heathland. Within the heathland, you have identified several populations of the vulnerable orchid Caladenia tonellii (Robust Fingers) and you know the soil is potentially infected with Phytophthora cinnamomi.</p>
-                    <p><strong>Task:</strong> Develop a step-by-step work procedure that details how you will control the gorse while:</p>
+                    
+                    <h3>Appendix C: Common Tasmanian Native Plants for Revegetation</h3>
                     <ul>
-                        <li>Preventing the spread of Phytophthora.</li>
-                        <li>Ensuring no damage to the native heathland vegetation or the orchids.</li>
-                        <li>Ensuring the safety of the work crew.</li>
+                        <li><strong>Trees:</strong> Eucalyptus globulus (Blue Gum), Eucalyptus ovata (Black Gum), Eucalyptus viminalis (White Gum), Acacia melanoxylon (Blackwood), Allocasuarina verticillata (Drooping She-oak).</li>
+                        <li><strong>Shrubs:</strong> Acacia dealbata (Silver Wattle), Bursaria spinosa (Prickly Box), Correa alba (White Correa), Leptospermum scoparium (Manuka), Melaleuca squarrosa (Scented Paperbark).</li>
+                        <li><strong>Groundcovers & Grasses:</strong> Dianella spp. (Flax-lilies), Lomandra longifolia (Spiny-headed Mat-rush), Poa labillardierei (Tussock Grass), Microlaena stipoides (Weeping Grass).</li>
                     </ul>
-                    <p>Your procedure should specify tools, methods, hygiene protocols, and any timing considerations.</p>
-                </div>
-                
-                <h3 id="2.3">2.3 Select, Use and Maintain Tools and Equipment</h3>
-                <p>The right tool, used correctly and kept in good condition, is fundamental to safe and efficient work.</p>
-                
-                <div class="activity-box">
-                    <div class="activity-title"><i class="fas fa-wrench"></i> Self-Directed Activity: Tool Maintenance Log</div>
-                    <p>Create a digital or physical "Tool Maintenance Logbook." For one week, practice using and maintaining a set of hand tools (e.g., loppers, handsaw, mattock). After each use, log the following:</p>
+                    
+                    <h3>Appendix D: Useful Resources and Contacts</h3>
                     <ul>
-                        <li>Date and Tool Used.</li>
-                        <li>Task it was used for.</li>
-                        <li>Condition before use (e.g., sharp, clean, loose handle?).</li>
-                        <li>Maintenance performed after use (e.g., cleaned with wire brush, washed, dried, oiled, sharpened).</li>
-                        <li>Any repairs needed.</li>
+                        <li>Tasmanian Parks and Wildlife Service</li>
+                        <li>Natural Values Atlas (NVA)</li>
+                        <li>NRM South / Cradle Coast NRM</li>
+                        <li>Weeds of Tasmania</li>
+                        <li>Aboriginal Heritage Tasmania</li>
+                        <li>WorkSafe Tasmania</li>
+                        <li>DrumMUSTER</li>
+                        <li>Tasmanian Land Conservancy</li>
+                        <li>Forest Practices Authority</li>
                     </ul>
-                    <p>This habit is a cornerstone of professional practice.</p>
+                </section>
+                
+                <div class="disclaimer">
+                    <strong>Disclaimer:</strong> This guide is a learning resource only and does not constitute a formal qualification. Always follow your registered training organisation's (RTO) specific training and assessment materials, and adhere to all workplace health and safety legislation and organisational procedures. Herbicide use must be in accordance with Australian Pesticides and Veterinary Medicines Authority (APVMA) regulations and product labels. Always seek appropriate cultural heritage and safety training before undertaking field work.
                 </div>
                 
-                <div id="quiz2" class="quiz-container">
-                    <div class="quiz-title"><i class="fas fa-question-circle"></i> Quiz 2: Practical Application</div>
-                    <div class="question">
-                        <div class="question-text">1. Compare and contrast the "cut and paint" and "drill and fill" methods for woody weed control. When would you choose one over the other?</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <div class="question">
-                        <div class="question-text">2. You need to control weeds along a creek bank that is a known habitat for the Giant Freshwater Lobster. What specific precautions must you take when selecting and applying a herbicide?</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <div class="question">
-                        <div class="question-text">3. Explain the term "local provenance" in the context of revegetation. Why is it a critical principle in Tasmanian ecosystem restoration?</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <div class="question">
-                        <div class="question-text">4. Create a step-by-step checklist for the safe operation and post-use maintenance of a knapsack sprayer.</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <div class="question">
-                        <div class="question-text">5. What is Phytophthora root rot and what are three specific hygiene practices to prevent its spread?</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <button class="nav-button" onclick="submitQuiz('quiz2')"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
+                <div class="nav-buttons">
+                    <button class="nav-button" onclick="switchTab('section3')"><i class="fas fa-arrow-left"></i> Previous: Section 3</button>
+                    <button class="nav-button" disabled>Next <i class="fas fa-arrow-right"></i></button>
                 </div>
-            </section>
-            
-            <section id="section3" class="section">
-                <h2><i class="fas fa-check-circle"></i> 4. Section 3: Complete Maintenance Activities</h2>
-                <p>The final stage of the work process is often the most neglected but is equally as important as the preparation and execution. Proper completion ensures the long-term success of the work, the safety of the site, and provides valuable data for future management.</p>
-                
-                <h3 id="3.1">3.1 Reinstate Site According to the Maintenance Plan</h3>
-                <p>Reinstatement is about actively assisting the natural recovery of the site after your intervention.</p>
-                
-                <div class="activity-box">
-                    <div class="activity-title"><i class="fas fa-redo"></i> Self-Directed Activity: Site Reinstatement Plan</div>
-                    <p>Using the same scenario from the previous activity (gorse control in a heathland with orchids and Phytophthora risk), now develop a reinstatement plan. Detail:</p>
-                    <ol>
-                        <li>What will you do with the cut gorse material? (Justify your choice based on biosecurity and ecological principles).</li>
-                        <li>How will you treat the soil that has been disturbed around the gorse plants to prevent erosion and weed invasion?</li>
-                        <li>What measures, if any, will you put in place to encourage the native heathland to recolonise the area?</li>
-                        <li>How will you mark the area for future monitoring?</li>
-                    </ol>
-                </div>
-                
-                <h3 id="3.2">3.2 Dispose of All Waste Material</h3>
-                <p>Responsible waste disposal closes the loop on your work activity and is a legal and ethical requirement.</p>
-                
-                <div class="activity-box">
-                    <div class="activity-title"><i class="fas fa-trash-alt"></i> Self-Directed Activity: Waste Management Flowchart</div>
-                    <p>Create a single-page, visual flowchart to guide decision-making for waste disposal on a conservation worksite. It should have "decision diamonds" asking questions like:</p>
-                    <ul>
-                        <li>"Is the material a declared weed that can resprout or set seed?"</li>
-                        <li>"Is the material suitable for habitat?"</li>
-                        <li>"Is the material a chemical container?"</li>
-                    </ul>
-                    <p>This will provide a clear, at-a-glance guide for you and your team.</p>
-                </div>
-                
-                <h3 id="3.3">3.3 Clean and Store Tools and Equipment</h3>
-                <p>This routine is vital for the longevity of equipment, cost-control for your organisation, and safety for the next user.</p>
-                
-                <h3 id="3.4">3.4 Record and Report Work Outcomes</h3>
-                <p>If it wasn't recorded, it wasn't done. Documentation provides the evidence of your work, informs future management, and is essential for accountability.</p>
-                
-                <div class="activity-box">
-                    <div class="activity-title"><i class="fas fa-clipboard-list"></i> Self-Directed Activity: Writing a Professional Field Report</div>
-                    <p>Using the following scenario, write a full and professional field report.</p>
-                    <p><strong>Scenario:</strong> On November 15th, 2024, you and a colleague (Jane Doe) spent the day at the "North-South Track" in the Peter Murrell Reserve. The task was to control broom seedlings in a 50m x 50m area that was treated for mature broom last year. The weather was fine and sunny, 18°C. You used a knapsack sprayer with a 1% solution of Glyphosate (as per the product label) and treated approximately 250 seedlings. You noticed several native Correa alba plants flowering healthily within the treatment area and took care to avoid spraying them. At 2:15 PM, Jane slightly twisted her ankle on a hidden hole but was able to walk back to the vehicle. You finished at 3:30 PM, cleaned all equipment, and left the site tidy. You recommend a monitoring visit in 6 months to check for any missed plants.</p>
-                    <p>Structure your report with clear headings (e.g., Site Details, Personnel, Work Summary, Observations, Incidents, Recommendations).</p>
-                </div>
-                
-                <div id="quiz3" class="quiz-container">
-                    <div class="quiz-title"><i class="fas fa-question-circle"></i> Quiz 3: Completion & Reporting</div>
-                    <div class="question">
-                        <div class="question-text">1. Describe three different methods for responsibly disposing of green waste from a vegetation clearing project and the situations where each would be appropriate.</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <div class="question">
-                        <div class="question-text">2. Why is it often better to chip and mulch green waste on-site rather than burning it or taking it to a tip? Provide two ecological and one practical reason.</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <div class="question">
-                        <div class="question-text">3. What information, beyond the basic "what, where, and when," is valuable to include in a final field report for a maintenance project? (List at least 5 items).</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <div class="question">
-                        <div class="question-text">4. A community group has volunteered to help with a planting day. Write a brief set of instructions for them on how to correctly clean and store the hand trowels and shovels at the end of the day.</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <div class="question">
-                        <div class="question-text">5. Explain the purpose of the DrumMUSTER program and the correct procedure for preparing a 10L herbicide container for collection.</div>
-                        <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
-                    </div>
-                    <button class="nav-button" onclick="submitQuiz('quiz3')"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
-                </div>
-            </section>
-            
-            <section id="appendices" class="section">
-                <h2><i class="fas fa-book"></i> 5. Appendices</h2>
-                
-                <h3 id="appendix-a">Appendix A: Key Tasmanian Legislation and Policies</h3>
-                <ul>
-                    <li>Nature Conservation Act 2002</li>
-                    <li>Threatened Species Protection Act 1995</li>
-                    <li>Weed Management Act 1999</li>
-                    <li>Forest Practices Act 1985</li>
-                    <li>Aboriginal Heritage Act 1975</li>
-                    <li>Environmental Management and Pollution Control Act 1994</li>
-                    <li>Work Health and Safety Act 2012</li>
-                    <li>Fire Service Act 1979</li>
-                </ul>
-                
-                <h3 id="appendix-b">Appendix B: Common Tasmanian Weeds and Control Methods</h3>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Weed</th>
-                                <th>Key Identification</th>
-                                <th>Impact</th>
-                                <th>Recommended Control Methods</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Gorse (Ulex europaeus)</td>
-                                <td>Dense, spiny shrub, yellow flowers.</td>
-                                <td>Smothers native vegetation, forms impenetrable thickets.</td>
-                                <td>Cut and paint, foliar spray (for seedlings), biological control (gorse spider mite).</td>
-                            </tr>
-                            <tr>
-                                <td>Broom (Cytisus scoparius)</td>
-                                <td>Tall shrub, green ribbed stems, bright yellow flowers.</td>
-                                <td>Forms dense stands, fixes nitrogen altering soil chemistry.</td>
-                                <td>Cut and paint, foliar spray, hand-pull seedlings.</td>
-                            </tr>
-                            <tr>
-                                <td>Spanish Heath (Erica lusitanica)</td>
-                                <td>Fine-leaved shrub, small white/pink flowers.</td>
-                                <td>Invades heathlands and grasslands, forms monocultures.</td>
-                                <td>Cut and paint, foliar spray.</td>
-                            </tr>
-                            <tr>
-                                <td>Arum Lily (Zantedeschia aethiopica)</td>
-                                <td>Large, arrow-shaped leaves, white flower spathe.</td>
-                                <td>Invades damp areas, replaces native riparian vegetation.</td>
-                                <td>Dig out tubers, foliar spray.</td>
-                            </tr>
-                            <tr>
-                                <td>Willows (Salix spp.)</td>
-                                <td>Trees, long thin leaves.</td>
-                                <td>Invades waterways, destabilises banks, shades out natives.</td>
-                                <td>Stem injection, cut and paint.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <h3 id="appendix-c">Appendix C: Common Tasmanian Native Plants for Revegetation</h3>
-                <ul>
-                    <li><strong>Trees:</strong> Eucalyptus globulus (Blue Gum), Eucalyptus ovata (Black Gum), Eucalyptus viminalis (White Gum), Acacia melanoxylon (Blackwood), Allocasuarina verticillata (Drooping She-oak).</li>
-                    <li><strong>Shrubs:</strong> Acacia dealbata (Silver Wattle), Bursaria spinosa (Prickly Box), Correa alba (White Correa), Leptospermum scoparium (Manuka), Melaleuca squarrosa (Scented Paperbark).</li>
-                    <li><strong>Groundcovers & Grasses:</strong> Dianella spp. (Flax-lilies), Lomandra longifolia (Spiny-headed Mat-rush), Poa labillardierei (Tussock Grass), Microlaena stipoides (Weeping Grass).</li>
-                </ul>
-                
-                <h3 id="appendix-d">Appendix D: Useful Resources and Contacts</h3>
-                <ul>
-                    <li>Tasmanian Parks and Wildlife Service</li>
-                    <li>Natural Values Atlas (NVA)</li>
-                    <li>NRM South / Cradle Coast NRM</li>
-                    <li>Weeds of Tasmania</li>
-                    <li>Aboriginal Heritage Tasmania</li>
-                    <li>WorkSafe Tasmania</li>
-                    <li>DrumMUSTER</li>
-                    <li>Tasmanian Land Conservancy</li>
-                    <li>Forest Practices Authority</li>
-                </ul>
-            </section>
-            
-            <div class="disclaimer">
-                <strong>Disclaimer:</strong> This guide is a learning resource only and does not constitute a formal qualification. Always follow your registered training organisation's (RTO) specific training and assessment materials, and adhere to all workplace health and safety legislation and organisational procedures. Herbicide use must be in accordance with Australian Pesticides and Veterinary Medicines Authority (APVMA) regulations and product labels. Always seek appropriate cultural heritage and safety training before undertaking field work.
-            </div>
-            
-            <div class="nav-buttons">
-                <button class="nav-button" onclick="scrollToSection('section1')"><i class="fas fa-arrow-left"></i> Previous: Section 1</button>
-                <button class="nav-button" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i> Back to Top</button>
-                <button class="nav-button" onclick="scrollToSection('section2')">Next: Section 2 <i class="fas fa-arrow-right"></i></button>
             </div>
         </main>
     </div>
@@ -996,18 +1038,33 @@
     </footer>
 
     <script>
+        // Tab navigation
+        const tabs = ['welcome', 'section1', 'section2', 'section3', 'appendices'];
+        let currentTab = 'welcome';
+        
+        function switchTab(tabId) {
+            // Hide current tab
+            document.getElementById(currentTab).classList.remove('active');
+            
+            // Show new tab
+            document.getElementById(tabId).classList.add('active');
+            currentTab = tabId;
+            
+            // Update progress
+            updateProgress();
+            
+            // Close mobile sidebar if open
+            document.getElementById('sidebar').classList.remove('active');
+            document.getElementById('mobileOverlay').classList.remove('active');
+            
+            // Scroll to top of content
+            document.querySelector('.main-content').scrollTop = 0;
+        }
+        
         // Progress tracking
         function updateProgress() {
-            const sections = document.querySelectorAll('.section');
-            let completedSections = 0;
-            
-            sections.forEach(section => {
-                if (section.classList.contains('section-complete')) {
-                    completedSections++;
-                }
-            });
-            
-            const progress = (completedSections / sections.length) * 100;
+            const tabIndex = tabs.indexOf(currentTab);
+            const progress = ((tabIndex + 1) / tabs.length) * 100;
             document.getElementById('progressBar').style.width = `${progress}%`;
         }
         
@@ -1085,26 +1142,13 @@
             this.classList.remove('active');
         });
         
-        // Navigation
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-        
-        // Add smooth scrolling for all anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        // Add tab navigation to sidebar links
+        document.querySelectorAll('.toc-list a').forEach(link => {
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                if (targetId) {
-                    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-                    
-                    // Close mobile sidebar if open
-                    document.getElementById('sidebar').classList.remove('active');
-                    document.getElementById('mobileOverlay').classList.remove('active');
+                const tabId = this.getAttribute('data-tab');
+                if (tabId) {
+                    switchTab(tabId);
                 }
             });
         });

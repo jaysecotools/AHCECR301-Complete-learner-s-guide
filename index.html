@@ -483,6 +483,191 @@
             margin-bottom: 0.5rem;
         }
         
+        /* New styles for quiz feedback */
+        .quiz-feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            display: none;
+        }
+        
+        .quiz-feedback.correct {
+            background-color: #e8f5e9;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .quiz-feedback.incorrect {
+            background-color: #ffebee;
+            border-left: 4px solid #f44336;
+        }
+        
+        .quiz-results {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background-color: #e3f2fd;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+            display: none;
+        }
+        
+        .quiz-score {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .answer-feedback {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .answer-feedback.correct {
+            background-color: rgba(46, 125, 50, 0.1);
+            color: var(--primary-dark);
+        }
+        
+        .answer-feedback.incorrect {
+            background-color: rgba(244, 67, 54, 0.1);
+            color: #c62828;
+        }
+        
+        .correct-answer {
+            margin-top: 0.5rem;
+            font-weight: 500;
+            color: var(--primary-dark);
+        }
+        
+        .question-container {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            background-color: #f9f9f9;
+            transition: var(--transition);
+        }
+        
+        .question-container.completed {
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .question-container.incorrect {
+            border-left: 4px solid #f44336;
+        }
+        
+        .question-number {
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .quiz-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .quiz-action-button {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+        
+        .quiz-action-button:hover {
+            background-color: #1565c0;
+            transform: translateY(-2px);
+        }
+        
+        .quiz-action-button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .quiz-action-button i {
+            margin-right: 8px;
+        }
+        
+        .completion-badge.quiz {
+            background-color: var(--accent-color);
+        }
+        
+        .jsa-container {
+            margin-top: 1rem;
+        }
+        
+        .jsa-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .jsa-header h4 {
+            margin: 0;
+            color: var(--primary-dark);
+        }
+        
+        .jsa-input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .jsa-delete-btn {
+            background: none;
+            border: none;
+            color: #d32f2f;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 0.25rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .jsa-delete-btn:hover {
+            background-color: rgba(211, 47, 47, 0.1);
+        }
+        
+        .jsa-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .jsa-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #e8f5e9;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .jsa-message p {
+            margin: 0;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+        }
+        
+        .jsa-message i {
+            margin-right: 0.5rem;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -514,11 +699,76 @@
             .header-content {
                 flex-wrap: wrap;
             }
+            
+            .jsa-actions {
+                flex-direction: column;
+            }
+            
+            .jsa-actions .nav-button {
+                width: 100%;
+            }
+            
+            .quiz-actions {
+                flex-direction: column;
+            }
+            
+            .quiz-action-button {
+                width: 100%;
+            }
+
+  .save-load-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .save-button, .load-button {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+        
+        .save-button:hover, .load-button:hover {
+            background-color: #1565c0;
+            transform: translateY(-2px);
+        }
+        
+        .save-button i, .load-button i {
+            margin-right: 5px;
+        }
+        
+        .save-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #e8f5e9;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            display: none;
+        }
+        
+        .save-message p {
+            margin: 0;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+        }
+        
+        .save-message i {
+            margin-right: 0.5rem;
+  
         }
     </style>
 </head>
 <body>
-    <header>
+       <header>
         <div class="header-content">
             <div>
                 <h1>AHCECR301 Maintain Native Ecosystem Areas</h1>
@@ -542,15 +792,26 @@
                 <input type="text" class="search-box" id="searchBox" placeholder="Search content...">
                 <div class="search-results" id="searchResults"></div>
             </div>
+            <div class="save-load-container">
+                <button class="save-button" id="saveProgressBtn">
+                    <i class="fas fa-save"></i> Save Progress
+                </button>
+                <button class="load-button" id="loadProgressBtn">
+                    <i class="fas fa-folder-open"></i> Load Progress
+                </button>
+            </div>
+            <div id="saveMessage" class="save-message">
+                <p><i class="fas fa-check-circle"></i> Progress saved successfully!</p>
+            </div>
             <ul class="toc-list">
-                <li><a href="#" data-tab="welcome">1. Welcome and Introduction <span class="completion-badge"><i class="fas fa-check"></i> Complete</span></a>
+                <li><a href="#" data-tab="welcome">Welcome and Introduction</a>
                     <ul class="toc-sublist">
                         <li><a href="#" data-tab="welcome">The Importance of Ecosystem Maintenance</a></li>
                         <li><a href="#" data-tab="welcome">How to Use This Guide</a></li>
                         <li><a href="#" data-tab="welcome">Unit Overview and Elements</a></li>
                     </ul>
                 </li>
-                <li><a href="#" data-tab="section1">2. Section 1: Prepare for Maintenance Activities</a>
+                <li><a href="#" data-tab="section1">Section 1: Prepare for Maintenance Activities</a>
                     <ul class="toc-sublist">
                         <li><a href="#" data-tab="section1">1.1 Identify and Confirm Maintenance Requirements</a></li>
                         <li><a href="#" data-tab="section1">1.2 Identify and Report Native Fauna, Flora and Significant Features</a></li>
@@ -558,7 +819,7 @@
                         <li><a href="#" data-tab="section1">Quiz 1: Preparation & Safety</a></li>
                     </ul>
                 </li>
-                <li><a href="#" data-tab="section2">3. Section 2: Undertake Maintenance Activities</a>
+                <li><a href="#" data-tab="section2">Section 2: Undertake Maintenance Activities</a>
                     <ul class="toc-sublist">
                         <li><a href="#" data-tab="section2">2.1 Carry out Maintenance According to Plan</a></li>
                         <li><a href="#" data-tab="section2">2.2 Minimise Damage to the Environment</a></li>
@@ -566,7 +827,7 @@
                         <li><a href="#" data-tab="section2">Quiz 2: Practical Application</a></li>
                     </ul>
                 </li>
-                <li><a href="#" data-tab="section3">4. Section 3: Complete Maintenance Activities</a>
+                <li><a href="#" data-tab="section3">Section 3: Complete Maintenance Activities</a>
                     <ul class="toc-sublist">
                         <li><a href="#" data-tab="section3">3.1 Reinstate the Site</a></li>
                         <li><a href="#" data-tab="section3">3.2 Dispose of All Waste Material</a></li>
@@ -575,7 +836,7 @@
                         <li><a href="#" data-tab="section3">Quiz 3: Completion & Reporting</a></li>
                     </ul>
                 </li>
-                <li><a href="#" data-tab="appendices">5. Appendices</a>
+                <li><a href="#" data-tab="appendices">Appendices</a>
                     <ul class="toc-sublist">
                         <li><a href="#" data-tab="appendices">Appendix A: Key Tasmanian Legislation</a></li>
                         <li><a href="#" data-tab="appendices">Appendix B: Common Tasmanian Weeds</a></li>
@@ -590,10 +851,10 @@
             <!-- Welcome Tab -->
             <div id="welcome" class="tab-container active">
                 <section class="section section-complete">
-                    <h2><i class="fas fa-home"></i> 1. Welcome and Introduction</h2>
+                    <h2><i class="fas fa-home"></i> Welcome and Introduction</h2>
                     
                     <h3>The Importance of Ecosystem Maintenance in Tasmania</h3>
-                    <p>Welcome to your studies in Conservation and Ecosystem Management. The island of Tasmania is a place of profound natural beauty and ecological significance, recognised globally for its unique and largely intact wild areas. From the rugged peaks of Cradle Mountain and the vast, silent button-grass plains of the South West, to the tranquil bays of the East Coast and the cool, temperate rainforests of the Tarkine, our ecosystems are our most valuable asset.</p>
+                    <p>The island of Tasmania is a place of profound natural beauty and ecological significance, recognised globally for its unique and largely intact wild areas. From the rugged peaks of Cradle Mountain and the vast, silent button-grass plains of the South West, to the tranquil bays of the East Coast and the cool, temperate rainforests of the Tarkine, our ecosystems are our most valuable asset.</p>
                     
                     <div class="key-point">
                         <div class="key-point-title"><i class="fas fa-lightbulb"></i> Key Point</div>
@@ -675,14 +936,14 @@
                 
                 <div class="nav-buttons">
                     <button class="nav-button" disabled><i class="fas fa-arrow-left"></i> Previous</button>
-                    <button class="nav-button" onclick="switchTab('section1')">Next: Section 1 <i class="fas fa-arrow-right"></i></button>
+                    <button class="nav-button" id="nextToSection1">Next: Section 1 <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
             
             <!-- Section 1 Tab -->
             <div id="section1" class="tab-container">
                 <section class="section">
-                    <h2><i class="fas fa-clipboard-check"></i> 2. Section 1: Prepare for Maintenance Activities</h2>
+                    <h2><i class="fas fa-clipboard-check"></i> Section 1: Prepare for Maintenance Activities</h2>
                     <p>Thorough preparation is the single most important factor in the success of any ecosystem maintenance project. Rushing this stage leads to wasted effort, potential damage to the environment, and safety risks.</p>
                     
                     <h3>1.1 Identify and Confirm Maintenance Requirements of the Site</h3>
@@ -777,7 +1038,6 @@
                         </ol>
                     </div>
                     
-                    <!-- Rest of Section 1 content remains the same -->
                     <h3>1.2 Identify and Report Native Fauna and Flora and Significant Features</h3>
                     <p>A core principle of ecological work is to "first, do no harm." This means being able to recognise and protect the valuable assets within your work site.</p>
                     
@@ -824,84 +1084,135 @@
                     <div class="activity-box">
                         <div class="activity-title"><i class="fas fa-hard-hat"></i> Self-Directed Activity: Developing a Job Safety Analysis (JSA)</div>
                         <p>Develop a detailed JSA for the task of manually removing gorse (using loppers and handsaws) in an area with rough, uneven terrain and a dense understorey that includes native laurels.</p>
-                        <p>Use a table with the following headings:</p>
-                        <div class="table-container">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Job Step</th>
-                                        <th>Hazard</th>
-                                        <th>Risk</th>
-                                        <th>Control Measures</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Travel to site</td>
-                                        <td>Uneven ground, hidden holes</td>
-                                        <td>Tripping, falls, sprains</td>
-                                        <td>Walk carefully, use a pole to probe ground, wear sturdy ankle-supporting boots.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cutting gorse</td>
-                                        <td>Sharp thorns, repetitive strain, native laurel sap</td>
-                                        <td>Cuts, scratches, muscular injury, severe skin and eye irritation</td>
-                                        <td>Wear leather gloves, long sleeves, and safety glasses. Use correct lifting/cutting techniques, take regular breaks. Be aware of nearby laurels; avoid contacting sap.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Moving debris</td>
-                                        <td>Thorns, heavy lifting, uneven terrain</td>
-                                        <td>Cuts, back injury, trips</td>
-                                        <td>Wear gloves, use correct manual handling techniques (bend knees, keep back straight), clear a safe path.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>...</td>
-                                        <td>...</td>
-                                        <td>...</td>
-                                        <td>...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        
+                        <div class="jsa-container">
+                            <div class="jsa-header">
+                                <h4>Job Safety Analysis (JSA) Form</h4>
+                                <button class="nav-button" id="addRowBtn"><i class="fas fa-plus"></i> Add Row</button>
+                            </div>
+                            
+                            <div class="table-container">
+                                <table id="jsaTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Job Step</th>
+                                            <th>Hazard</th>
+                                            <th>Risk</th>
+                                            <th>Control Measures</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="jsaTableBody">
+                                        <tr>
+                                            <td><input type="text" class="jsa-input" placeholder="Travel to site"></td>
+                                            <td><input type="text" class="jsa-input" placeholder="Uneven ground, hidden holes"></td>
+                                            <td><input type="text" class="jsa-input" placeholder="Tripping, falls, sprains"></td>
+                                            <td><input type="text" class="jsa-input" placeholder="Walk carefully, use a pole to probe ground, wear sturdy ankle-supporting boots"></td>
+                                            <td><button class="jsa-delete-btn"><i class="fas fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="jsa-input" placeholder="Cutting gorse"></td>
+                                            <td><input type="text" class="jsa-input" placeholder="Sharp thorns, repetitive strain, native laurel sap"></td>
+                                            <td><input type="text" class="jsa-input" placeholder="Cuts, scratches, muscular injury, severe skin and eye irritation"></td>
+                                            <td><input type="text" class="jsa-input" placeholder="Wear leather gloves, long sleeves, and safety glasses. Use correct lifting/cutting techniques, take regular breaks"></td>
+                                            <td><button class="jsa-delete-btn"><i class="fas fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="jsa-input" placeholder="Moving debris"></td>
+                                            <td><input type="text" class="jsa-input" placeholder="Thorns, heavy lifting, uneven terrain"></td>
+                                            <td><input type="text" class="jsa-input" placeholder="Cuts, back injury, trips"></td>
+                                            <td><input type="text" class="jsa-input" placeholder="Wear gloves, use correct manual handling techniques, clear a safe path"></td>
+                                            <td><button class="jsa-delete-btn"><i class="fas fa-trash"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="jsa-actions">
+                                <button class="nav-button" id="saveJsaBtn"><i class="fas fa-save"></i> Save JSA</button>
+                                <button class="nav-button" id="printJsaBtn"><i class="fas fa-print"></i> Print JSA</button>
+                                <button class="nav-button" id="clearJsaBtn"><i class="fas fa-eraser"></i> Clear All</button>
+                                <button class="nav-button" id="resetJsaBtn"><i class="fas fa-redo"></i> Reset to Examples</button>
+                            </div>
+                            
+                            <div id="jsaSavedMessage" class="jsa-message" style="display: none;">
+                                <p><i class="fas fa-check-circle"></i> JSA saved successfully!</p>
+                            </div>
                         </div>
-                        <p>Complete the JSA for all steps, including tool transport, work, and clean-up.</p>
                     </div>
                     
                     <div class="quiz-container">
                         <div class="quiz-title"><i class="fas fa-question-circle"></i> Quiz 1: Preparation & Safety</div>
-                        <div class="question">
-                            <div class="question-text">1. Explain the difference between a Threatened Species Recovery Plan and a Weed Management Plan. What is the primary focus of each?</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q1-1">
+                            <div class="question-number">Question 1</div>
+                            <div class="question-text">Explain the difference between a Threatened Species Recovery Plan and a Weed Management Plan. What is the primary focus of each?</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="1"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q1-1"></div>
                         </div>
-                        <div class="question">
-                            <div class="question-text">2. You are about to start a revegetation project in a coastal heathland. Name two key pieces of Tasmanian legislation you should be aware of and briefly explain why each is relevant.</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q1-2">
+                            <div class="question-number">Question 2</div>
+                            <div class="question-text">You are about to start a revegetation project in a coastal heathland. Name two key pieces of Tasmanian legislation you should be aware of and briefly explain why each is relevant.</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="2"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q1-2"></div>
                         </div>
-                        <div class="question">
-                            <div class="question-text">3. Describe the correct procedure if you discover a previously unrecorded Aboriginal midden (a scatter of stone artefacts) during weed control operations.</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q1-3">
+                            <div class="question-number">Question 3</div>
+                            <div class="question-text">Describe the correct procedure if you discover a previously unrecorded Aboriginal midden (a scatter of stone artefacts) during weed control operations.</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="3"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q1-3"></div>
                         </div>
-                        <div class="question">
-                            <div class="question-text">4. List the minimum PPE you would wear for manually clearing a blackberry thicket in a damp gully and state the purpose of each item.</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q1-4">
+                            <div class="question-number">Question 4</div>
+                            <div class="question-text">List the minimum PPE you would wear for manually clearing a blackberry thicket in a damp gully and state the purpose of each item.</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="4"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q1-4"></div>
                         </div>
-                        <div class="question">
-                            <div class="question-text">5. What are the symptoms of hypothermia and what are the first three actions you should take if a team member shows signs of it?</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q1-5">
+                            <div class="question-number">Question 5</div>
+                            <div class="question-text">What are the symptoms of hypothermia and what are the first three actions you should take if a team member shows signs of it?</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="5"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q1-5"></div>
                         </div>
-                        <button class="nav-button" onclick="submitQuiz('quiz1')"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
+                        
+                        <div class="quiz-actions">
+                            <button class="quiz-action-button" id="checkQuiz1"><i class="fas fa-check-circle"></i> Check Answers</button>
+                            <button class="quiz-action-button" id="showAnswersQuiz1"><i class="fas fa-lightbulb"></i> Show Model Answers</button>
+                            <button class="quiz-action-button" id="submitQuiz1"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
+                            <button class="quiz-action-button" id="resetQuiz1"><i class="fas fa-redo"></i> Reset Quiz</button>
+                        </div>
+                        
+                        <div class="quiz-results" id="results-quiz1">
+                            <div class="quiz-score" id="score-quiz1"></div>
+                            <div id="detailed-results-quiz1"></div>
+                        </div>
                     </div>
                 </section>
                 
                 <div class="nav-buttons">
-                    <button class="nav-button" onclick="switchTab('welcome')"><i class="fas fa-arrow-left"></i> Previous: Welcome</button>
-                    <button class="nav-button" onclick="switchTab('section2')">Next: Section 2 <i class="fas fa-arrow-right"></i></button>
+                    <button class="nav-button" id="prevToWelcome"><i class="fas fa-arrow-left"></i> Previous: Welcome</button>
+                    <button class="nav-button" id="nextToSection2">Next: Section 2 <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
             
             <!-- Section 2 Tab -->
             <div id="section2" class="tab-container">
                 <section class="section">
-                    <h2><i class="fas fa-tools"></i> 3. Section 2: Undertake Maintenance Activities</h2>
+                    <h2><i class="fas fa-tools"></i> Section 2: Undertake Maintenance Activities</h2>
                     <p>This section covers the practical application of your knowledge and skills. It is the "on-ground" phase where planning meets action. The emphasis here is on executing tasks effectively, efficiently, and with minimal negative impact on the very environment you are working to maintain.</p>
                     
                     <h3>2.1 Carry out Maintenance of the Native Ecosystem According to the Maintenance Plan and Supervisory Requirements</h3>
@@ -960,7 +1271,6 @@
                         </div>
                     </div>
                     
-                    <!-- Rest of Section 2 content remains the same -->
                     <div class="activity-box">
                         <div class="activity-title"><i class="fas fa-file-alt"></i> Self-Directed Activity: Weed Control Strategy Report</div>
                         <p>Choose a specific Tasmanian environmental weed (e.g., Spanish Heath, English Broom, Willow). Research and write a 500-word report that outlines:</p>
@@ -1010,40 +1320,76 @@
                     
                     <div class="quiz-container">
                         <div class="quiz-title"><i class="fas fa-question-circle"></i> Quiz 2: Practical Application</div>
-                        <div class="question">
-                            <div class="question-text">1. Compare and contrast the "cut and paint" and "drill and fill" methods for woody weed control. When would you choose one over the other?</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q2-1">
+                            <div class="question-number">Question 1</div>
+                            <div class="question-text">Compare and contrast the "cut and paint" and "drill and fill" methods for woody weed control. When would you choose one over the other?</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="1"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q2-1"></div>
                         </div>
-                        <div class="question">
-                            <div class="question-text">2. You need to control weeds along a creek bank that is a known habitat for the Giant Freshwater Lobster. What specific precautions must you take when selecting and applying a herbicide?</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q2-2">
+                            <div class="question-number">Question 2</div>
+                            <div class="question-text">You need to control weeds along a creek bank that is a known habitat for the Giant Freshwater Lobster. What specific precautions must you take when selecting and applying a herbicide?</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="2"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q2-2"></div>
                         </div>
-                        <div class="question">
-                            <div class="question-text">3. Explain the term "local provenance" in the context of revegetation. Why is it a critical principle in Tasmanian ecosystem restoration?</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q2-3">
+                            <div class="question-number">Question 3</div>
+                            <div class="question-text">Explain the term "local provenance" in the context of revegetation. Why is it a critical principle in Tasmanian ecosystem restoration?</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="3"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q2-3"></div>
                         </div>
-                        <div class="question">
-                            <div class="question-text">4. Create a step-by-step checklist for the safe operation and post-use maintenance of a knapsack sprayer.</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q2-4">
+                            <div class="question-number">Question 4</div>
+                            <div class="question-text">Create a step-by-step checklist for the safe operation and post-use maintenance of a knapsack sprayer.</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="4"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q2-4"></div>
                         </div>
-                        <div class="question">
-                            <div class="question-text">5. What is Phytophthora root rot and what are three specific hygiene practices to prevent its spread?</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q2-5">
+                            <div class="question-number">Question 5</div>
+                            <div class="question-text">What is Phytophthora root rot and what are three specific hygiene practices to prevent its spread?</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="5"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q2-5"></div>
                         </div>
-                        <button class="nav-button" onclick="submitQuiz('quiz2')"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
+                        
+                        <div class="quiz-actions">
+                            <button class="quiz-action-button" id="checkQuiz2"><i class="fas fa-check-circle"></i> Check Answers</button>
+                            <button class="quiz-action-button" id="showAnswersQuiz2"><i class="fas fa-lightbulb"></i> Show Model Answers</button>
+                            <button class="quiz-action-button" id="submitQuiz2"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
+                            <button class="quiz-action-button" id="resetQuiz2"><i class="fas fa-redo"></i> Reset Quiz</button>
+                        </div>
+                        
+                        <div class="quiz-results" id="results-quiz2">
+                            <div class="quiz-score" id="score-quiz2"></div>
+                            <div id="detailed-results-quiz2"></div>
+                        </div>
                     </div>
                 </section>
                 
                 <div class="nav-buttons">
-                    <button class="nav-button" onclick="switchTab('section1')"><i class="fas fa-arrow-left"></i> Previous: Section 1</button>
-                    <button class="nav-button" onclick="switchTab('section3')">Next: Section 3 <i class="fas fa-arrow-right"></i></button>
+                    <button class="nav-button" id="prevToSection1"><i class="fas fa-arrow-left"></i> Previous: Section 1</button>
+                    <button class="nav-button" id="nextToSection3">Next: Section 3 <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
             
             <!-- Section 3 Tab -->
             <div id="section3" class="tab-container">
                 <section class="section">
-                    <h2><i class="fas fa-check-circle"></i> 4. Section 3: Complete Maintenance Activities</h2>
+                    <h2><i class="fas fa-check-circle"></i> Section 3: Complete Maintenance Activities</h2>
                     <p>The final stage of the work process is often the most neglected but is equally as important as the preparation and execution. Proper completion ensures the long-term success of the work, the safety of the site, and provides valuable data for future management.</p>
                     
                     <h3>3.1 Reinstate Site According to the Maintenance Plan</h3>
@@ -1102,7 +1448,6 @@
                         </div>
                     </div>
                     
-                    <!-- Rest of Section 3 content remains the same -->
                     <div class="activity-box">
                         <div class="activity-title"><i class="fas fa-redo"></i> Self-Directed Activity: Site Reinstatement Plan</div>
                         <p>Using the same scenario from the previous activity (gorse control in a heathland with orchids and Phytophthora risk), now develop a reinstatement plan. Detail:</p>
@@ -1148,40 +1493,76 @@
                     
                     <div class="quiz-container">
                         <div class="quiz-title"><i class="fas fa-question-circle"></i> Quiz 3: Completion & Reporting</div>
-                        <div class="question">
-                            <div class="question-text">1. Describe three different methods for responsibly disposing of green waste from a vegetation clearing project and the situations where each would be appropriate.</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q3-1">
+                            <div class="question-number">Question 1</div>
+                            <div class="question-text">Describe three different methods for responsibly disposing of green waste from a vegetation clearing project and the situations where each would be appropriate.</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="1"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q3-1"></div>
                         </div>
-                        <div class="question">
-                            <div class="question-text">2. Why is it often better to chip and mulch green waste on-site rather than burning it or taking it to a tip? Provide two ecological and one practical reason.</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q3-2">
+                            <div class="question-number">Question 2</div>
+                            <div class="question-text">Why is it often better to chip and mulch green waste on-site rather than burning it or taking it to a tip? Provide two ecological and one practical reason.</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="2"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q3-2"></div>
                         </div>
-                        <div class="question">
-                            <div class="question-text">3. What information, beyond the basic "what, where, and when," is valuable to include in a final field report for a maintenance project? (List at least 5 items).</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q3-3">
+                            <div class="question-number">Question 3</div>
+                            <div class="question-text">What information, beyond the basic "what, where, and when," is valuable to include in a final field report for a maintenance project? (List at least 5 items).</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="3"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q3-3"></div>
                         </div>
-                        <div class="question">
-                            <div class="question-text">4. A community group has volunteered to help with a planting day. Write a brief set of instructions for them on how to correctly clean and store the hand trowels and shovels at the end of the day.</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q3-4">
+                            <div class="question-number">Question 4</div>
+                            <div class="question-text">A community group has volunteered to help with a planting day. Write a brief set of instructions for them on how to correctly clean and store the hand trowels and shovels at the end of the day.</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="4"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q3-4"></div>
                         </div>
-                        <div class="question">
-                            <div class="question-text">5. Explain the purpose of the DrumMUSTER program and the correct procedure for preparing a 10L herbicide container for collection.</div>
-                            <div class="answer"><textarea rows="4" style="width: 100%;"></textarea></div>
+                        
+                        <div class="question-container" id="q3-5">
+                            <div class="question-number">Question 5</div>
+                            <div class="question-text">Explain the purpose of the DrumMUSTER program and the correct procedure for preparing a 10L herbicide container for collection.</div>
+                            <div class="answer">
+                                <textarea rows="4" style="width: 100%;" data-question="5"></textarea>
+                            </div>
+                            <div class="answer-feedback" id="feedback-q3-5"></div>
                         </div>
-                        <button class="nav-button" onclick="submitQuiz('quiz3')"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
+                        
+                        <div class="quiz-actions">
+                            <button class="quiz-action-button" id="checkQuiz3"><i class="fas fa-check-circle"></i> Check Answers</button>
+                            <button class="quiz-action-button" id="showAnswersQuiz3"><i class="fas fa-lightbulb"></i> Show Model Answers</button>
+                            <button class="quiz-action-button" id="submitQuiz3"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
+                            <button class="quiz-action-button" id="resetQuiz3"><i class="fas fa-redo"></i> Reset Quiz</button>
+                        </div>
+                        
+                        <div class="quiz-results" id="results-quiz3">
+                            <div class="quiz-score" id="score-quiz3"></div>
+                            <div id="detailed-results-quiz3"></div>
+                        </div>
                     </div>
                 </section>
                 
                 <div class="nav-buttons">
-                    <button class="nav-button" onclick="switchTab('section2')"><i class="fas fa-arrow-left"></i> Previous: Section 2</button>
-                    <button class="nav-button" onclick="switchTab('appendices')">Next: Appendices <i class="fas fa-arrow-right"></i></button>
+                    <button class="nav-button" id="prevToSection2"><i class="fas fa-arrow-left"></i> Previous: Section 2</button>
+                    <button class="nav-button" id="nextToAppendices">Next: Appendices <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
             
             <!-- Appendices Tab -->
             <div id="appendices" class="tab-container">
                 <section class="section">
-                    <h2><i class="fas fa-book"></i> 5. Appendices</h2>
+                    <h2><i class="fas fa-book"></i> Appendices</h2>
                     
                     <h3>Appendix A: Key Tasmanian Legislation and Policies</h3>
                     <ul>
@@ -1252,7 +1633,7 @@
                     <ul>
                         <li>Tasmanian Parks and Wildlife Service</li>
                         <li>Natural Values Atlas (NVA)</li>
-                        <li>NRM South / Cradle Coast NRM</li>
+                        <li>NRM South / NRM North / Cradle Coast NRM</li>
                         <li>Weeds of Tasmania</li>
                         <li>Aboriginal Heritage Tasmania</li>
                         <li>WorkSafe Tasmania</li>
@@ -1267,7 +1648,7 @@
                 </div>
                 
                 <div class="nav-buttons">
-                    <button class="nav-button" onclick="switchTab('section3')"><i class="fas fa-arrow-left"></i> Previous: Section 3</button>
+                    <button class="nav-button" id="prevToSection3"><i class="fas fa-arrow-left"></i> Previous: Section 3</button>
                     <button class="nav-button" disabled>Next <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
@@ -1276,7 +1657,7 @@
     
     <footer>
         <p>Student Learning Guide: AHCECR301 Maintain Native Ecosystem Areas | Contextualised for Tasmania, Australia</p>
-        <p>Version: Current at time of publication</p>
+        <p>Developed by Jay Rowley 2025</p>
     </footer>
 
     <script>
@@ -1346,78 +1727,790 @@
                 prevCard.style.display = 'block';
             }
         }
-        
-        // Quiz submission
-        function submitQuiz(quizId) {
-            const quizContainer = document.querySelector(`#${currentTab} .quiz-container`);
-            const questions = quizContainer.querySelectorAll('.question');
+
+        // Quiz data - model answers and keywords for evaluation
+        const quizData = {
+            quiz1: {
+                questions: [
+                    {
+                        id: 1,
+                        question: "Explain the difference between a Threatened Species Recovery Plan and a Weed Management Plan. What is the primary focus of each?",
+                        modelAnswer: "A Threatened Species Recovery Plan focuses on protecting and recovering specific threatened species through targeted actions like habitat management, monitoring, and restrictions on activities that may harm the species. A Weed Management Plan focuses on controlling invasive plant species through methods like chemical control, manual removal, and prevention strategies to protect native ecosystems from weed invasion.",
+                        keywords: ["threatened species", "recovery", "protection", "weed control", "invasive plants", "ecosystem protection"]
+                    },
+                    {
+                        id: 2,
+                        question: "You are about to start a revegetation project in a coastal heathland. Name two key pieces of Tasmanian legislation you should be aware of and briefly explain why each is relevant.",
+                        modelAnswer: "1. Nature Conservation Act 2002 - Relevant because it establishes the reserve system and provides for management of flora and fauna in protected areas like coastal heathlands. 2. Threatened Species Protection Act 1995 - Important because coastal heathlands may contain listed threatened species that require protection during revegetation work. 3. Aboriginal Heritage Act 1975 - Coastal areas often contain significant Aboriginal heritage sites that must not be disturbed.",
+                        keywords: ["Nature Conservation Act", "Threatened Species Protection Act", "Aboriginal Heritage Act", "reserve", "protected", "heritage", "threatened species"]
+                    },
+                    {
+                        id: 3,
+                        question: "Describe the correct procedure if you discover a previously unrecorded Aboriginal midden (a scatter of stone artefacts) during weed control operations.",
+                        modelAnswer: "1. Immediately stop work in the area to avoid further disturbance. 2. Do not touch or remove any artefacts. 3. Mark the location if possible without disturbing the site. 4. Report the discovery immediately to your supervisor. 5. The supervisor will contact Aboriginal Heritage Tasmania as required by the Aboriginal Heritage Act 1975. 6. Wait for guidance from heritage authorities before resuming any work in the vicinity.",
+                        keywords: ["stop work", "do not touch", "report", "supervisor", "Aboriginal Heritage Tasmania", "Aboriginal Heritage Act"]
+                    },
+                    {
+                        id: 4,
+                        question: "List the minimum PPE you would wear for manually clearing a blackberry thicket in a damp gully and state the purpose of each item.",
+                        modelAnswer: "1. Sturdy boots (steel-capped, ankle support) - protection from thorns, uneven ground, and falling tools. 2. Long pants and long-sleeved shirt - protection from thorns, scratches, and insects. 3. Leather gloves - protection from sharp thorns. 4. Safety glasses - eye protection from thorns and debris. 5. High-visibility clothing - visibility to other workers in dense vegetation.",
+                        keywords: ["boots", "long pants", "long sleeves", "gloves", "safety glasses", "high-visibility", "protection"]
+                    },
+                    {
+                        id: 5,
+                        question: "What are the symptoms of hypothermia and what are the first three actions you should take if a team member shows signs of it?",
+                        modelAnswer: "Symptoms: shivering, cold pale skin, slurred speech, slow breathing, tiredness, confusion. First actions: 1. Move the person to a warm, dry shelter. 2. Remove any wet clothing and replace with dry layers. 3. Warm the person gradually with blankets or body heat - avoid direct heat sources.",
+                        keywords: ["shivering", "cold skin", "slurred speech", "move to shelter", "remove wet clothing", "warm gradually"]
+                    }
+                ]
+            },
+            quiz2: {
+                questions: [
+                    {
+                        id: 1,
+                        question: "Compare and contrast the 'cut and paint' and 'drill and fill' methods for woody weed control. When would you choose one over the other?",
+                        modelAnswer: "Both methods are used for woody weed control and involve herbicide application. 'Cut and paint' involves cutting the stem close to the ground and immediately applying herbicide to the cut surface. It's effective for smaller to medium-sized stems. 'Drill and fill' involves drilling holes into the trunk and filling them with herbicide, used for larger trees where cutting isn't practical. Choose 'cut and paint' for stems up to 10cm diameter, and 'drill and fill' for larger trees or where cutting would create a safety hazard.",
+                        keywords: ["cut and paint", "drill and fill", "herbicide", "woody weeds", "stem", "trunk", "larger trees"]
+                    },
+                    {
+                        id: 2,
+                        question: "You need to control weeds along a creek bank that is a known habitat for the Giant Freshwater Lobster. What specific precautions must you take when selecting and applying a herbicide?",
+                        modelAnswer: "1. Select a herbicide that is approved for aquatic or riparian use and has low toxicity to aquatic organisms. 2. Avoid spraying directly into water or when rain is forecast. 3. Maintain a buffer zone from the water's edge as specified on the herbicide label. 4. Use spot treatment rather than broad-scale application. 5. Consider manual removal methods where practical to eliminate herbicide risk entirely.",
+                        keywords: ["aquatic", "riparian", "low toxicity", "buffer zone", "spot treatment", "manual removal"]
+                    },
+                    {
+                        id: 3,
+                        question: "Explain the term 'local provenance' in the context of revegetation. Why is it a critical principle in Tasmanian ecosystem restoration?",
+                        modelAnswer: "Local provenance means using plants grown from seed collected from the same ecological region as the planting site. It's critical because Tasmanian plants have adapted to local conditions over thousands of years. Using local provenance maintains genetic integrity, ensures plants are adapted to local climate and soil, prevents genetic pollution, and supports local ecological relationships between plants, animals, and microorganisms.",
+                        keywords: ["local provenance", "seed collected", "ecological region", "genetic integrity", "adapted", "genetic pollution"]
+                    },
+                    {
+                        id: 4,
+                        question: "Create a step-by-step checklist for the safe operation and post-use maintenance of a knapsack sprayer.",
+                        modelAnswer: "Operation: 1. Wear appropriate PPE. 2. Check equipment for leaks or damage. 3. Calibrate sprayer for correct application rate. 4. Mix chemicals in well-ventilated area. 5. Test spray pattern before starting. 6. Apply herbicide according to label directions. Post-use: 1. Triple rinse tank and sprayer. 2. Dispose of rinse water appropriately. 3. Clean all parts thoroughly. 4. Check and clean nozzles. 5. Store in cool, dry place away from children and animals.",
+                        keywords: ["PPE", "check equipment", "calibrate", "mix chemicals", "triple rinse", "clean", "store properly"]
+                    },
+                    {
+                        id: 5,
+                        question: "What is Phytophthora root rot and what are three specific hygiene practices to prevent its spread?",
+                        modelAnswer: "Phytophthora root rot is a soil-borne disease caused by Phytophthora cinnamomi that kills many native plants. Three hygiene practices: 1. Clean all tools, equipment, and vehicle tyres before moving between sites. 2. Use designated walking paths and avoid walking through infected areas. 3. Work from clean areas to dirty areas, not vice versa. 4. Use soil-free planting media for nursery stock.",
+                        keywords: ["soil-borne disease", "clean tools", "vehicle tyres", "walking paths", "clean to dirty", "soil-free media"]
+                    }
+                ]
+            },
+            quiz3: {
+                questions: [
+                    {
+                        id: 1,
+                        question: "Describe three different methods for responsibly disposing of green waste from a vegetation clearing project and the situations where each would be appropriate.",
+                        modelAnswer: "1. On-site chipping and mulching - Appropriate for non-invasive species, returns nutrients to soil, suppresses weeds. 2. Hot composting - For weeds that don't propagate vegetatively, kills seeds through heat. 3. Off-site disposal at licensed facility - For declared weeds that can resprout or for large volumes. 4. Habitat piles - For non-weedy material in appropriate locations to provide wildlife habitat.",
+                        keywords: ["chipping", "mulching", "hot composting", "off-site disposal", "habitat piles", "declared weeds"]
+                    },
+                    {
+                        id: 2,
+                        question: "Why is it often better to chip and mulch green waste on-site rather than burning it or taking it to a tip? Provide two ecological and one practical reason.",
+                        modelAnswer: "Ecological reasons: 1. Returns nutrients to the soil, improving soil health. 2. Provides habitat for invertebrates and small animals. Practical reason: 1. Reduces transport costs and carbon footprint. Additional ecological benefit: Suppresses weed growth by covering bare soil.",
+                        keywords: ["nutrients", "soil health", "habitat", "transport costs", "carbon footprint", "weed suppression"]
+                    },
+                    {
+                        id: 3,
+                        question: "What information, beyond the basic 'what, where, and when,' is valuable to include in a final field report for a maintenance project? (List at least 5 items).",
+                        modelAnswer: "1. Weather conditions during work. 2. Personnel involved and hours worked. 3. Equipment used. 4. Any issues or incidents encountered. 5. Observations of flora/fauna. 6. Photos of before/during/after. 7. Recommendations for follow-up work. 8. Quantities of materials used (e.g., herbicide volumes). 9. Safety considerations addressed.",
+                        keywords: ["weather", "personnel", "equipment", "issues", "observations", "photos", "recommendations"]
+                    },
+                    {
+                        id: 4,
+                        question: "A community group has volunteered to help with a planting day. Write a brief set of instructions for them on how to correctly clean and store the hand trowels and shovels at the end of the day.",
+                        modelAnswer: "1. Remove all soil from tools using a brush or stick. 2. Wash with water if necessary and dry thoroughly. 3. Check for damage and report any issues. 4. Lightly oil metal parts to prevent rust. 5. Store in a dry, secure location. 6. Return to designated storage area.",
+                        keywords: ["remove soil", "wash", "dry", "check damage", "oil", "store dry"]
+                    },
+                    {
+                        id: 5,
+                        question: "Explain the purpose of the DrumMUSTER program and the correct procedure for preparing a 10L herbicide container for collection.",
+                        modelAnswer: "DrumMUSTER is a national program for recycling cleaned agricultural and veterinary chemical containers. Preparation procedure: 1. Triple rinse container immediately after use. 2. Remove and discard lid. 3. Pierce or crush container to prevent reuse. 4. Store in a safe, dry place until collection. 5. Take to designated collection point.",
+                        keywords: ["recycling", "triple rinse", "remove lid", "pierce/crush", "safe storage", "collection point"]
+                    }
+                ]
+            }
+        };
+
+        // Quiz functionality
+        function checkQuiz(quizId) {
+            const quizDataForQuiz = quizData[quizId];
             let allAnswered = true;
+            let correctCount = 0;
             
-            questions.forEach(question => {
-                const textarea = question.querySelector('textarea');
-                if (!textarea.value.trim()) {
+            quizDataForQuiz.questions.forEach(q => {
+                const answerElement = document.querySelector(`#${currentTab} textarea[data-question="${q.id}"]`);
+                const feedbackElement = document.getElementById(`feedback-${quizId}-${q.id}`);
+                const questionContainer = document.getElementById(`q${quizId.charAt(quizId.length-1)}-${q.id}`);
+                
+                if (!answerElement || !answerElement.value.trim()) {
                     allAnswered = false;
-                    textarea.style.border = '2px solid red';
+                    if (answerElement) {
+                        answerElement.style.border = '2px solid #ff9800';
+                    }
+                    if (feedbackElement) {
+                        feedbackElement.innerHTML = '<div class="answer-feedback" style="background-color: #fff3e0; color: #ef6c00;">Please provide an answer to this question.</div>';
+                        feedbackElement.style.display = 'block';
+                    }
+                    if (questionContainer) {
+                        questionContainer.classList.remove('completed', 'incorrect');
+                    }
                 } else {
-                    textarea.style.border = '';
+                    answerElement.style.border = '';
+                    
+                    // Simple keyword matching for evaluation
+                    const userAnswer = answerElement.value.toLowerCase();
+                    let matchedKeywords = 0;
+                    
+                    q.keywords.forEach(keyword => {
+                        if (userAnswer.includes(keyword.toLowerCase())) {
+                            matchedKeywords++;
+                        }
+                    });
+                    
+                    // Consider answer correct if at least 50% of keywords are matched
+                    const threshold = Math.ceil(q.keywords.length * 0.5);
+                    const isCorrect = matchedKeywords >= threshold;
+                    
+                    if (isCorrect) {
+                        correctCount++;
+                        if (feedbackElement) {
+                            feedbackElement.innerHTML = '<div class="answer-feedback correct"><i class="fas fa-check-circle"></i> Good answer! You\'ve covered the key concepts.</div>';
+                            feedbackElement.style.display = 'block';
+                        }
+                        if (questionContainer) {
+                            questionContainer.classList.add('completed');
+                            questionContainer.classList.remove('incorrect');
+                        }
+                    } else {
+                        if (feedbackElement) {
+                            feedbackElement.innerHTML = `<div class="answer-feedback incorrect"><i class="fas fa-exclamation-circle"></i> Your answer could be improved. Try to include more of the key concepts.</div>`;
+                            feedbackElement.style.display = 'block';
+                        }
+                        if (questionContainer) {
+                            questionContainer.classList.add('incorrect');
+                            questionContainer.classList.remove('completed');
+                        }
+                    }
                 }
             });
             
-            if (allAnswered) {
-                alert('Quiz submitted successfully!');
-                markSectionComplete(currentTab);
+            // Show results
+            const resultsElement = document.getElementById(`results-${quizId}`);
+            const scoreElement = document.getElementById(`score-${quizId}`);
+            const detailedResultsElement = document.getElementById(`detailed-results-${quizId}`);
+            
+            if (allAnswered && resultsElement && scoreElement && detailedResultsElement) {
+                const percentage = Math.round((correctCount / quizDataForQuiz.questions.length) * 100);
+                scoreElement.textContent = `Your Score: ${correctCount}/${quizDataForQuiz.questions.length} (${percentage}%)`;
+                
+                let performanceMessage = "";
+                if (percentage >= 80) {
+                    performanceMessage = "Excellent work! You have a strong understanding of this section.";
+                } else if (percentage >= 60) {
+                    performanceMessage = "Good effort! Review the model answers to improve your understanding.";
+                } else {
+                    performanceMessage = "Keep studying this section. Review the material and try again.";
+                }
+                
+                detailedResultsElement.innerHTML = `
+                    <p>${performanceMessage}</p>
+                    <p><strong>Breakdown:</strong></p>
+                    <ul>
+                        <li>Correct answers: ${correctCount}</li>
+                        <li>Questions needing review: ${quizDataForQuiz.questions.length - correctCount}</li>
+                    </ul>
+                `;
+                
+                resultsElement.style.display = 'block';
+                
+                // Mark section as complete if score is good enough
+                if (percentage >= 70) {
+                    markSectionComplete(currentTab);
+                    
+                    // Update TOC to show quiz completion
+                    const tocItem = document.querySelector(`.toc-list a[data-tab="${currentTab}"]`);
+                    if (tocItem && !tocItem.querySelector('.completion-badge.quiz')) {
+                        const badge = document.createElement('span');
+                        badge.className = 'completion-badge quiz';
+                        badge.innerHTML = '<i class="fas fa-check"></i> Quiz Complete';
+                        tocItem.appendChild(badge);
+                    }
+                }
             } else {
-                alert('Please answer all questions before submitting.');
+                alert('Please answer all questions before checking your answers.');
             }
         }
         
-        // Search functionality
-        document.getElementById('searchBox').addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            const searchResults = document.getElementById('searchResults');
-            
-            if (searchTerm.length < 2) {
-                searchResults.style.display = 'none';
-                return;
-            }
-            
-            // In a full implementation, this would search through all content
-            // For now, we'll just show a placeholder
-            searchResults.innerHTML = `
-                <div class="search-result-item">Search result for "${searchTerm}"</div>
-                <div class="search-result-item">Another result for "${searchTerm}"</div>
+function showQuizAnswers(quizId) {
+    const quizDataForQuiz = quizData[quizId];
+    
+    quizDataForQuiz.questions.forEach(q => {
+        // Fix the ID selector - it was missing the section number
+        const feedbackElement = document.getElementById(`feedback-q${quizId.charAt(quizId.length-1)}-${q.id}`);
+        if (feedbackElement) {
+            feedbackElement.innerHTML = `
+                <div class="correct-answer">
+                    <strong>Model Answer:</strong> ${q.modelAnswer}
+                </div>
             `;
-            searchResults.style.display = 'block';
-        });
+            feedbackElement.style.display = 'block';
+            
+            // Highlight the question container
+            const questionContainer = document.getElementById(`q${quizId.charAt(quizId.length-1)}-${q.id}`);
+            if (questionContainer) {
+                questionContainer.classList.add('completed');
+            }
+        }
+    });
+    
+    // Show a message
+    alert('Model answers are now displayed. Compare these with your own responses.');
+}
         
-        // Mobile sidebar toggle
-        document.getElementById('toggleSidebar').addEventListener('click', function() {
-            document.getElementById('sidebar').classList.toggle('active');
-            document.getElementById('mobileOverlay').classList.toggle('active');
-        });
+        function submitQuiz(quizId) {
+            checkQuiz(quizId);
+            
+            // Show submission confirmation
+            const resultsElement = document.getElementById(`results-${quizId}`);
+            if (resultsElement && resultsElement.style.display === 'block') {
+                alert('Quiz submitted successfully! Your results have been recorded.');
+                
+                // In a real application, you would send results to a server here
+            }
+        }
         
-        document.getElementById('mobileOverlay').addEventListener('click', function() {
-            document.getElementById('sidebar').classList.remove('active');
-            this.classList.remove('active');
-        });
-        
-        // Add tab navigation to sidebar links
-        document.querySelectorAll('.toc-list a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const tabId = this.getAttribute('data-tab');
-                if (tabId) {
-                    switchTab(tabId);
+        function resetQuiz(quizId) {
+            if (confirm('Are you sure you want to reset this quiz? All your answers will be cleared.')) {
+                // Clear all textareas in the current tab
+                const textareas = document.querySelectorAll(`#${currentTab} textarea`);
+                textareas.forEach(textarea => {
+                    textarea.value = '';
+                    textarea.style.border = '';
+                });
+                
+                // Hide all feedback in the current tab
+                const feedbackElements = document.querySelectorAll(`#${currentTab} .answer-feedback`);
+                feedbackElements.forEach(feedback => {
+                    feedback.style.display = 'none';
+                    feedback.innerHTML = '';
+                });
+                
+                // Reset question containers in the current tab
+                const questionContainers = document.querySelectorAll(`#${currentTab} .question-container`);
+                questionContainers.forEach(container => {
+                    container.classList.remove('completed', 'incorrect');
+                });
+                
+                // Hide results
+                const resultsElement = document.getElementById(`results-${quizId}`);
+                if (resultsElement) {
+                    resultsElement.style.display = 'none';
+                }
+            }
+        }
+
+        // JSA functionality
+        function addJsaRow() {
+            const tableBody = document.getElementById('jsaTableBody');
+            if (!tableBody) return;
+            
+            const newRow = document.createElement('tr');
+            
+            newRow.innerHTML = `
+                <td><input type="text" class="jsa-input" placeholder="Enter job step"></td>
+                <td><input type="text" class="jsa-input" placeholder="Enter hazard"></td>
+                <td><input type="text" class="jsa-input" placeholder="Enter risk"></td>
+                <td><input type="text" class="jsa-input" placeholder="Enter control measures"></td>
+                <td><button class="jsa-delete-btn"><i class="fas fa-trash"></i></button></td>
+            `;
+            
+            tableBody.appendChild(newRow);
+            
+            // Add event listener to the new delete button
+            newRow.querySelector('.jsa-delete-btn').addEventListener('click', function() {
+                deleteJsaRow(this);
+            });
+        }
+
+        function deleteJsaRow(button) {
+            const row = button.closest('tr');
+            if (row) {
+                row.remove();
+            }
+        }
+
+        function saveJsa() {
+            const tableBody = document.getElementById('jsaTableBody');
+            if (!tableBody) return;
+            
+            const rows = tableBody.querySelectorAll('tr');
+            const jsaData = [];
+            
+            rows.forEach(row => {
+                const inputs = row.querySelectorAll('.jsa-input');
+                if (inputs.length >= 4) {
+                    jsaData.push({
+                        jobStep: inputs[0].value,
+                        hazard: inputs[1].value,
+                        risk: inputs[2].value,
+                        controlMeasures: inputs[3].value
+                    });
                 }
             });
-        });
-        
-        // Initialize progress on page load
+            
+            // In a real application, you would save this data to a database
+            // For this demo, we'll just save to localStorage
+            localStorage.setItem('jsaData', JSON.stringify(jsaData));
+            
+            // Show success message
+            const message = document.getElementById('jsaSavedMessage');
+            if (message) {
+                message.style.display = 'block';
+                
+                // Hide message after 3 seconds
+                setTimeout(() => {
+                    message.style.display = 'none';
+                }, 3000);
+            }
+            
+            // Mark section as complete
+            markSectionComplete('section1');
+        }
+
+        function printJsa() {
+            const tableBody = document.getElementById('jsaTableBody');
+            if (!tableBody) return;
+            
+            // Create a printable version of the JSA
+            const printWindow = window.open('', '_blank');
+            const rows = tableBody.querySelectorAll('tr');
+            
+            let printContent = `
+                <html>
+                    <head>
+                        <title>Job Safety Analysis</title>
+                        <style>
+                            body { font-family: Arial, sans-serif; }
+                            table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+                            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                            th { background-color: #f2f2f2; }
+                            h1 { color: #2e7d32; }
+                        </style>
+                    </head>
+                    <body>
+                        <h1>Job Safety Analysis (JSA)</h1>
+                        <p><strong>Task:</strong> Manually removing gorse in an area with rough, uneven terrain</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Job Step</th>
+                                    <th>Hazard</th>
+                                    <th>Risk</th>
+                                    <th>Control Measures</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+            `;
+            
+            rows.forEach(row => {
+                const inputs = row.querySelectorAll('.jsa-input');
+                if (inputs.length >= 4) {
+                    printContent += `
+                        <tr>
+                            <td>${inputs[0].value || ''}</td>
+                            <td>${inputs[1].value || ''}</td>
+                            <td>${inputs[2].value || ''}</td>
+                            <td>${inputs[3].value || ''}</td>
+                        </tr>
+                    `;
+                }
+            });
+            
+            printContent += `
+                            </tbody>
+                        </table>
+                        <p><strong>Date:</strong> ${new Date().toLocaleDateString()}</p>
+                    </body>
+                </html>
+            `;
+            
+            printWindow.document.write(printContent);
+            printWindow.document.close();
+            printWindow.print();
+        }
+
+        function clearJsa() {
+            if (confirm('Are you sure you want to clear all entries? All data will be lost.')) {
+                const tableBody = document.getElementById('jsaTableBody');
+                if (tableBody) {
+                    tableBody.innerHTML = '';
+                    
+                    // Add one empty row to start fresh
+                    addJsaRow();
+                    
+                    // Clear saved data from localStorage
+                    localStorage.removeItem('jsaData');
+                    
+                    // Show confirmation message
+                    alert('All entries cleared successfully!');
+                }
+            }
+        }
+
+        function resetJsaToExamples() {
+            if (confirm('Are you sure you want to reset to the example entries? Your current work will be replaced.')) {
+                const tableBody = document.getElementById('jsaTableBody');
+                if (tableBody) {
+                    tableBody.innerHTML = '';
+                    
+                    // Add the example rows
+                    const examples = [
+                        {
+                            jobStep: 'Travel to site',
+                            hazard: 'Uneven ground, hidden holes',
+                            risk: 'Tripping, falls, sprains',
+                            controlMeasures: 'Walk carefully, use a pole to probe ground, wear sturdy ankle-supporting boots'
+                        },
+                        {
+                            jobStep: 'Cutting gorse',
+                            hazard: 'Sharp thorns, repetitive strain, native laurel sap',
+                            risk: 'Cuts, scratches, muscular injury, severe skin and eye irritation',
+                            controlMeasures: 'Wear leather gloves, long sleeves, and safety glasses. Use correct lifting/cutting techniques, take regular breaks. Be aware of nearby laurels; avoid contacting sap'
+                        },
+                        {
+                            jobStep: 'Moving debris',
+                            hazard: 'Thorns, heavy lifting, uneven terrain',
+                            risk: 'Cuts, back injury, trips',
+                            controlMeasures: 'Wear gloves, use correct manual handling techniques (bend knees, keep back straight), clear a safe path'
+                        }
+                    ];
+                    
+                    examples.forEach(example => {
+                        const newRow = document.createElement('tr');
+                        newRow.innerHTML = `
+                            <td><input type="text" class="jsa-input" value="${example.jobStep}"></td>
+                            <td><input type="text" class="jsa-input" value="${example.hazard}"></td>
+                            <td><input type="text" class="jsa-input" value="${example.risk}"></td>
+                            <td><input type="text" class="jsa-input" value="${example.controlMeasures}"></td>
+                            <td><button class="jsa-delete-btn"><i class="fas fa-trash"></i></button></td>
+                        `;
+                        
+                        tableBody.appendChild(newRow);
+                        
+                        // Add event listener to the delete button
+                        newRow.querySelector('.jsa-delete-btn').addEventListener('click', function() {
+                            deleteJsaRow(this);
+                        });
+                    });
+                    
+                    // Clear saved data from localStorage since we're resetting to examples
+                    localStorage.removeItem('jsaData');
+                    
+                    // Show confirmation message
+                    alert('Reset to example entries successfully!');
+                }
+            }
+        }
+
+        // Load saved JSA data if it exists
+        function loadJsaData() {
+            const savedData = localStorage.getItem('jsaData');
+            if (savedData) {
+                const jsaData = JSON.parse(savedData);
+                const tableBody = document.getElementById('jsaTableBody');
+                if (tableBody) {
+                    tableBody.innerHTML = '';
+                    
+                    jsaData.forEach(item => {
+                        const newRow = document.createElement('tr');
+                        newRow.innerHTML = `
+                            <td><input type="text" class="jsa-input" value="${item.jobStep}"></td>
+                            <td><input type="text" class="jsa-input" value="${item.hazard}"></td>
+                            <td><input type="text" class="jsa-input" value="${item.risk}"></td>
+                            <td><input type="text" class="jsa-input" value="${item.controlMeasures}"></td>
+                            <td><button class="jsa-delete-btn"><i class="fas fa-trash"></i></button></td>
+                        `;
+                        
+                        tableBody.appendChild(newRow);
+                        
+                        // Add event listener to the delete button
+                        newRow.querySelector('.jsa-delete-btn').addEventListener('click', function() {
+                            deleteJsaRow(this);
+                        });
+                    });
+                }
+            }
+        }
+
+        // Initialize everything when the page loads
         document.addEventListener('DOMContentLoaded', function() {
+            // Navigation buttons
+            document.getElementById('nextToSection1').addEventListener('click', () => switchTab('section1'));
+            document.getElementById('prevToWelcome').addEventListener('click', () => switchTab('welcome'));
+            document.getElementById('nextToSection2').addEventListener('click', () => switchTab('section2'));
+            document.getElementById('prevToSection1').addEventListener('click', () => switchTab('section1'));
+            document.getElementById('nextToSection3').addEventListener('click', () => switchTab('section3'));
+            document.getElementById('prevToSection2').addEventListener('click', () => switchTab('section2'));
+            document.getElementById('nextToAppendices').addEventListener('click', () => switchTab('appendices'));
+            document.getElementById('prevToSection3').addEventListener('click', () => switchTab('section3'));
+
+            // Quiz buttons
+            document.getElementById('checkQuiz1').addEventListener('click', () => checkQuiz('quiz1'));
+            document.getElementById('showAnswersQuiz1').addEventListener('click', () => showQuizAnswers('quiz1'));
+            document.getElementById('submitQuiz1').addEventListener('click', () => submitQuiz('quiz1'));
+            document.getElementById('resetQuiz1').addEventListener('click', () => resetQuiz('quiz1'));
+            
+            document.getElementById('checkQuiz2').addEventListener('click', () => checkQuiz('quiz2'));
+            document.getElementById('showAnswersQuiz2').addEventListener('click', () => showQuizAnswers('quiz2'));
+            document.getElementById('submitQuiz2').addEventListener('click', () => submitQuiz('quiz2'));
+            document.getElementById('resetQuiz2').addEventListener('click', () => resetQuiz('quiz2'));
+            
+            document.getElementById('checkQuiz3').addEventListener('click', () => checkQuiz('quiz3'));
+            document.getElementById('showAnswersQuiz3').addEventListener('click', () => showQuizAnswers('quiz3'));
+            document.getElementById('submitQuiz3').addEventListener('click', () => submitQuiz('quiz3'));
+            document.getElementById('resetQuiz3').addEventListener('click', () => resetQuiz('quiz3'));
+
+            // JSA buttons
+            document.getElementById('addRowBtn').addEventListener('click', addJsaRow);
+            document.getElementById('saveJsaBtn').addEventListener('click', saveJsa);
+            document.getElementById('printJsaBtn').addEventListener('click', printJsa);
+            document.getElementById('clearJsaBtn').addEventListener('click', clearJsa);
+            document.getElementById('resetJsaBtn').addEventListener('click', resetJsaToExamples);
+
+            // Add event listeners to existing JSA delete buttons
+            document.querySelectorAll('.jsa-delete-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    deleteJsaRow(this);
+                });
+            });
+
+            // Mobile sidebar toggle
+            document.getElementById('toggleSidebar').addEventListener('click', function() {
+                const sidebar = document.getElementById('sidebar');
+                const overlay = document.getElementById('mobileOverlay');
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+            
+            document.getElementById('mobileOverlay').addEventListener('click', function() {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.remove('active');
+                this.classList.remove('active');
+            });
+            
+            // Add tab navigation to sidebar links
+            document.querySelectorAll('.toc-list a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tabId = this.getAttribute('data-tab');
+                    if (tabId) {
+                        switchTab(tabId);
+                    }
+                });
+            });
+            
+            // Search functionality
+            document.getElementById('searchBox').addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const searchResults = document.getElementById('searchResults');
+                
+                if (searchTerm.length < 2) {
+                    if (searchResults) {
+                        searchResults.style.display = 'none';
+                    }
+                    return;
+                }
+                
+                // In a full implementation, this would search through all content
+                // For now, we'll just show a placeholder
+                if (searchResults) {
+                    searchResults.innerHTML = `
+                        <div class="search-result-item">Search result for "${searchTerm}"</div>
+                        <div class="search-result-item">Another result for "${searchTerm}"</div>
+                    `;
+                    searchResults.style.display = 'block';
+                }
+            });
+            
+            // Load saved JSA data
+            loadJsaData();
+            
+            // Initialize progress
             updateProgress();
             
             // Mark welcome section as complete by default
             markSectionComplete('welcome');
+        });
+
+       // Progress tracking and save/load functionality
+        let userProgress = {
+            currentTab: 'welcome',
+            completedSections: ['welcome'],
+            quizResults: {
+                quiz1: { score: 0, completed: false },
+                quiz2: { score: 0, completed: false },
+                quiz3: { score: 0, completed: false }
+            },
+            jsaData: null,
+            lastSaved: null
+        };
+        
+        // Save progress function
+        function saveProgress() {
+            // Update progress data
+            userProgress.currentTab = currentTab;
+            userProgress.lastSaved = new Date().toISOString();
+            
+            // Save quiz answers
+            const quizzes = ['quiz1', 'quiz2', 'quiz3'];
+            quizzes.forEach(quizId => {
+                const textareas = document.querySelectorAll(`#${quizId.replace('quiz', 'section')} textarea`);
+                if (textareas.length > 0) {
+                    userProgress.quizResults[quizId].answers = {};
+                    textareas.forEach(textarea => {
+                        const questionNum = textarea.getAttribute('data-question');
+                        userProgress.quizResults[quizId].answers[questionNum] = textarea.value;
+                    });
+                }
+            });
+            
+            // Save JSA data if it exists
+            const savedJsaData = localStorage.getItem('jsaData');
+            if (savedJsaData) {
+                userProgress.jsaData = JSON.parse(savedJsaData);
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('ahcecr301Progress', JSON.stringify(userProgress));
+            
+            // Show success message
+            const saveMessage = document.getElementById('saveMessage');
+            if (saveMessage) {
+                saveMessage.style.display = 'block';
+                setTimeout(() => {
+                    saveMessage.style.display = 'none';
+                }, 3000);
+            }
+            
+            console.log('Progress saved successfully!', userProgress);
+        }
+        
+        // Load progress function
+        function loadProgress() {
+            const savedProgress = localStorage.getItem('ahcecr301Progress');
+            if (savedProgress) {
+                userProgress = JSON.parse(savedProgress);
+                
+                // Restore current tab
+                if (userProgress.currentTab && tabs.includes(userProgress.currentTab)) {
+                    switchTab(userProgress.currentTab);
+                }
+                
+                // Restore quiz answers
+                const quizzes = ['quiz1', 'quiz2', 'quiz3'];
+                quizzes.forEach(quizId => {
+                    if (userProgress.quizResults[quizId] && userProgress.quizResults[quizId].answers) {
+                        const sectionId = quizId.replace('quiz', 'section');
+                        Object.keys(userProgress.quizResults[quizId].answers).forEach(questionNum => {
+                            const textarea = document.querySelector(`#${sectionId} textarea[data-question="${questionNum}"]`);
+                            if (textarea) {
+                                textarea.value = userProgress.quizResults[quizId].answers[questionNum];
+                            }
+                        });
+                    }
+                });
+                
+                // Restore JSA data
+                if (userProgress.jsaData) {
+                    localStorage.setItem('jsaData', JSON.stringify(userProgress.jsaData));
+                    loadJsaData();
+                }
+                
+                // Update progress bar
+                updateProgress();
+                
+                // Show completion status for sections
+                userProgress.completedSections.forEach(sectionId => {
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        section.classList.add('section-complete');
+                    }
+                });
+                
+                alert('Progress loaded successfully!');
+                console.log('Progress loaded:', userProgress);
+            } else {
+                alert('No saved progress found.');
+            }
+        }
+        
+        // Update markSectionComplete to track in userProgress
+        function markSectionComplete(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section && !section.classList.contains('section-complete')) {
+                section.classList.add('section-complete');
+                
+                // Add to completed sections if not already there
+                if (!userProgress.completedSections.includes(sectionId)) {
+                    userProgress.completedSections.push(sectionId);
+                }
+                
+                updateProgress();
+            }
+        }
+        
+        // Update progress calculation to use completed sections
+        function updateProgress() {
+            const progress = (userProgress.completedSections.length / tabs.length) * 100;
+            document.getElementById('progressBar').style.width = `${progress}%`;
+        }
+        
+        // Update quiz submission to track in userProgress
+        function submitQuiz(quizId) {
+            checkQuiz(quizId);
+            
+            // Update progress tracking
+            const resultsElement = document.getElementById(`results-${quizId}`);
+            if (resultsElement && resultsElement.style.display === 'block') {
+                const scoreElement = document.getElementById(`score-${quizId}`);
+                if (scoreElement) {
+                    const scoreText = scoreElement.textContent;
+                    const scoreMatch = scoreText.match(/(\d+)\/\d+/);
+                    if (scoreMatch) {
+                        userProgress.quizResults[quizId].score = parseInt(scoreMatch[1]);
+                        userProgress.quizResults[quizId].completed = true;
+                        
+                        // Mark section as complete
+                        const sectionId = quizId.replace('quiz', 'section');
+                        markSectionComplete(sectionId);
+                    }
+                }
+                
+                alert('Quiz submitted successfully! Your results have been recorded.');
+            }
+        }
+        
+        // Initialize everything when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // All previous initialization code remains...
+            
+            // Add save/load progress buttons
+            document.getElementById('saveProgressBtn').addEventListener('click', saveProgress);
+            document.getElementById('loadProgressBtn').addEventListener('click', loadProgress);
+            
+            // Try to load progress automatically on page load
+            const savedProgress = localStorage.getItem('ahcecr301Progress');
+            if (savedProgress) {
+                if (confirm('Saved progress found. Would you like to load it?')) {
+                    loadProgress();
+                }
+            }
+            
+            // Initialize progress
+            updateProgress();
         });
     </script>
 </body>
